@@ -203,8 +203,7 @@ body {
 
 .hero__logo {
     height: 64px;
-    width: auto;
-    max-width: 100%;
+    width: 228px;
 }
 
 .hero__title {
