@@ -1240,15 +1240,57 @@ body {
 }
 
 /* ========================================
-   Animações
-   ======================================== */
-.phrase-animation {
-    animation: fadeInOut 2.5s ease-in-out;
+    Animações
+    ======================================== */
+.phrase-rotator {
+    position: relative;
+    height: 1.5em;
+    overflow: hidden;
 }
 
-@keyframes fadeInOut {
+.phrase-rotator__phrase {
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 1.5;
+    color: white;
+    opacity: 0;
+    animation: phraseCycle 7.5s infinite;
+}
+
+.phrase-rotator__phrase:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.phrase-rotator__phrase:nth-child(2) {
+    animation-delay: 2.5s;
+}
+
+.phrase-rotator__phrase:nth-child(3) {
+    animation-delay: 5s;
+}
+
+@keyframes phraseCycle {
     0% { opacity: 0; transform: translateY(10px); }
     10% { opacity: 1; transform: translateY(0); }
-    90% { opacity: 1; transform: translateY(0); }
-    100% { opacity: 0; transform: translateY(-10px); }
+    33% { opacity: 1; transform: translateY(0); }
+    43% { opacity: 0; transform: translateY(-10px); }
+    100% { opacity: 0; }
+}
+
+@supports (animation-timeline: view()) {
+    .scroll-reveal {
+        opacity: 0;
+        transform: translateY(30px);
+        animation: reveal linear both;
+        animation-timeline: view();
+        animation-range: entry 0% cover 20%;
+    }
+}
+
+@keyframes reveal {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

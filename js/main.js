@@ -3,29 +3,7 @@
 // ========================================
 const CONFIG = {
     scrollOffset: 80,
-    phraseInterval: 2500,
 };
-
-// ========================================
-// Frases Rotativas (Hero)
-// ========================================
-function initPhraseRotation() {
-    const phrases = ["Sem burocracia", "Sem boleto novo", "Direto na conta de luz"];
-    const phraseEl = document.getElementById('phrase');
-    let currentIndex = 0;
-
-    setInterval(() => {
-        currentIndex = (currentIndex + 1) % phrases.length;
-        phraseEl.style.opacity = '0';
-        phraseEl.style.transform = 'translateY(10px)';
-
-        setTimeout(() => {
-            phraseEl.textContent = phrases[currentIndex];
-            phraseEl.style.opacity = '1';
-            phraseEl.style.transform = 'translateY(0)';
-        }, 300);
-    }, CONFIG.phraseInterval);
-}
 
 // ========================================
 // Scroll para Seções
@@ -75,12 +53,13 @@ function handleFormSubmit(event) {
         acceptTerms: acceptTerms.checked,
     });
 
-    showSuccessMessage();
+    const message = document.getElementById('success-message');
+    message.classList.add('visible');
 
     // Reset após 3 segundos
     setTimeout(() => {
         document.getElementById('contact-form-el').reset();
-        hideSuccessMessage();
+        message.classList.remove('visible');
     }, 3000);
 
     return false;
@@ -98,25 +77,6 @@ function toggleError(fieldId, hasError) {
         if (error) error.classList.remove('visible');
     }
 }
-
-// ========================================
-// Mensagem de Sucesso
-// ========================================
-function showSuccessMessage() {
-    const message = document.getElementById('success-message');
-    message.classList.add('visible');
-}
-
-function hideSuccessMessage() {
-    const message = document.getElementById('success-message');
-    message.classList.remove('visible');
-}
-
-document.getElementById('success-message')?.addEventListener('click', (e) => {
-    if (e.target.classList.contains('success-message__close')) {
-        hideSuccessMessage();
-    }
-});
 
 // ========================================
 // Máscara de CPF
@@ -172,36 +132,10 @@ function playVideo() {
 }
 
 // ========================================
-// Scroll Reveal (animação ao scroll)
-// ========================================
-function initScrollReveal() {
-    const elements = document.querySelectorAll('.hero__content, .contact-form__info, .contact-form__card, .comparison__left, .comparison__right, .video-section__content, .plans__content, .cta-final__content');
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-                observer.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.1 });
-
-    elements.forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(30px)';
-        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        observer.observe(el);
-    });
-}
-
-// ========================================
 // Inicialização
 // ========================================
 document.addEventListener('DOMContentLoaded', () => {
-    initPhraseRotation();
     initCPFMask();
     initWhatsAppMask();
-    initScrollReveal();
     console.log('Landing page inicializada!');
 });

@@ -43,7 +43,7 @@
     <!-- Mensagem de Sucesso -->
     <div class="success-message" id="success-message">
         <p>✓ Solicitação enviada com sucesso! Entraremos em contato em breve.</p>
-        <button class="success-message__close" onclick="hideSuccessMessage()" aria-label="Fechar">×</button>
+        <button class="success-message__close" onclick="document.getElementById('success-message').classList.remove('visible')" aria-label="Fechar">×</button>
     </div>
 
     <!-- SEÇÃO 1 - Hero -->
@@ -53,10 +53,14 @@
         </div>
         <div class="hero__bg-overlay"></div>
         <div class="container">
-            <div class="hero__content">
+            <div class="hero__content scroll-reveal">
                 <img src="assets/images/logo.png" alt="Equatorial Serviços - Logo" class="hero__logo" loading="eager">
                 <h1 class="hero__title">Proteja sua casa<br>por menos de<br><span class="hero__accent">R$ 1,00 por dia</span></h1>
-                <p class="hero__phrase" id="phrase">Sem burocracia</p>
+                <div class="phrase-rotator">
+                    <p class="phrase-rotator__phrase">Sem burocracia</p>
+                    <p class="phrase-rotator__phrase">Sem boleto novo</p>
+                    <p class="phrase-rotator__phrase">Direto na conta de luz</p>
+                </div>
                 <ul class="hero__benefits">
                     <li>Assistência 24h</li>
                     <li>Resolve imprevistos rápido</li>
@@ -71,7 +75,7 @@
     <section class="section contact-form" id="contact-form" role="region" aria-label="Formulário de contato">
         <div class="container">
             <div class="contact-form__layout">
-                <div class="contact-form__info">
+                <div class="contact-form__info scroll-reveal">
                     <div class="contact-form__icon">
                         <svg viewBox="0 0 144 144" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M12 56.5L66.24 15.82C68.3056 14.2708 69.3383 13.4963 70.4726 13.1977C71.4738 12.9341 72.5262 12.9341 73.5274 13.1977C74.6617 13.4963 75.6945 14.2708 77.76 15.82L132 56.5M24 47.5V106.3C24 113.021 24 116.381 25.3079 118.948C26.4584 121.206 28.2942 123.042 30.5521 124.192C33.1191 125.5 36.4794 125.5 43.2 125.5H100.8C107.521 125.5 110.881 125.5 113.448 124.192C115.706 123.042 117.542 121.206 118.692 118.948C120 116.381 120 113.021 120 106.3V47.5L83.52 20.14C79.3889 17.0417 77.3234 15.4925 75.0548 14.8953C73.0524 14.3682 70.9476 14.3682 68.9452 14.8953C66.6767 15.4925 64.6111 17.0417 60.48 20.14L24 47.5Z" stroke="white" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -84,7 +88,7 @@
                     </div>
                 </div>
 
-                <div class="contact-form__card" id="form-card">
+                <div class="contact-form__card scroll-reveal" id="form-card">
                     <form class="form" id="contact-form-el" onsubmit="return handleFormSubmit(event)" aria-label="Formulário de contato">
                         <div class="form__group">
                             <label class="form__label">Nome completo <span class="form__required">*</span></label>
@@ -131,7 +135,7 @@
         </div>
         <div class="container">
             <div class="comparison__layout">
-                <div class="comparison__left">
+                <div class="comparison__left scroll-reveal">
                     <p class="comparison__question">Em vez de gastar <span class="comparison__red">muito</span> com cada imprevisto…</p>
                     <div class="comparison__costs">
                         <div class="cost-card">
@@ -175,7 +179,7 @@
                     </div>
                 </div>
 
-                <div class="comparison__right">
+                <div class="comparison__right scroll-reveal">
                     <p class="comparison__answer">…pague <span class="comparison__teal">pouco</span><br>por todos juntos</p>
                     <div class="comparison__deal">
                         <div class="comparison__deal-icon">
@@ -198,7 +202,7 @@
             <img src="assets/images/video-bg.png" alt="" loading="lazy" decoding="async">
         </div>
         <div class="container">
-            <div class="video-section__content">
+            <div class="video-section__content scroll-reveal">
                 <div class="video-section__title-block">
                     <h2 class="video-section__title">Sorte que Transforma</h2>
                     <p class="video-section__subtitle">Concorra a prêmios mensais com seus números da sorte</p>
@@ -281,7 +285,7 @@
             <img src="assets/images/cta-bg.png" alt="" loading="lazy" decoding="async">
         </div>
         <div class="container">
-            <div class="cta-final__content">
+            <div class="cta-final__content scroll-reveal">
                 <h2 class="cta-final__title">+1 milhão de clientes já<br><span class="cta-final__title--large">utilizam esse benefício.</span></h2>
                 <p class="cta-final__subtitle">Evite o próximo prejuízo</p>
                 <div class="cta-final__cta-card">
