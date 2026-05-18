@@ -166,6 +166,7 @@ body {
     align-items: center;
     background: var(--blue-medium);
     scroll-snap-align: start;
+    overflow: hidden;
 }
 
 .hero__bg {
