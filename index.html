@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Seguro residencial Equatorial - Proteja sua casa por menos de R$ 1,00/dia">
+    <title>Equatorial Serviços - Seguro Residencial</title>
+
+    <meta property="og:title" content="Seguro Residencial Equatorial - Proteja sua casa">
+    <meta property="og:description" content="Proteja sua casa por menos de R$ 1,00/dia com cobertura completa contra imprevistos.">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Seguro Residencial Equatorial">
+    <meta name="twitter:description" content="Proteja sua casa por menos de R$ 1,00/dia.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Equatorial Serviços",
+        "legalName": "Equatorial Serviços",
+        "taxID": "39.155.151/0001-54",
+        "telephone": "0800 728 9518",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Alameda A, Quadra Sqs, 100, Altos do Calhau / Cohafuma",
+            "addressLocality": "São Luís",
+            "addressRegion": "MA",
+            "postalCode": "65070-900",
+            "addressCountry": "BR"
+        }
+    }
+    </script>
+</head>
+<body role="main">
+
+    <!-- Mensagem de Sucesso -->
+    <div class="success-message" id="success-message">
+        <p>✓ Solicitação enviada com sucesso! Entraremos em contato em breve.</p>
+        <button class="success-message__close" onclick="hideSuccessMessage()" aria-label="Fechar">×</button>
+    </div>
+
+    <!-- SEÇÃO 1 - Hero -->
+    <section class="section hero" id="hero" role="banner">
+        <div class="hero__bg">
+            <img src="assets/images/hero-bg.png" alt="" loading="eager" decoding="async">
+        </div>
+        <div class="hero__bg-overlay"></div>
+        <div class="container">
+            <div class="hero__content">
+                <img src="assets/images/logo.png" alt="Equatorial Serviços - Logo" class="hero__logo" loading="eager">
+                <h1 class="hero__title">Proteja sua casa<br>por menos de<br><span class="hero__accent">R$ 1,00 por dia</span></h1>
+                <p class="hero__phrase" id="phrase">Sem burocracia</p>
+                <ul class="hero__benefits">
+                    <li>Assistência 24h</li>
+                    <li>Resolve imprevistos rápido</li>
+                    <li>Exclusivo para clientes Equatorial</li>
+                </ul>
+                <button class="btn btn--primary btn--large" onclick="scrollToForm()" aria-label="Solicitar contato">Solicitar contato</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO 2 - Formulário de Contato -->
+    <section class="section contact-form" id="contact-form" role="region" aria-label="Formulário de contato">
+        <div class="container">
+            <div class="contact-form__layout">
+                <div class="contact-form__info">
+                    <div class="contact-form__icon">
+                        <svg viewBox="0 0 144 144" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 56.5L66.24 15.82C68.3056 14.2708 69.3383 13.4963 70.4726 13.1977C71.4738 12.9341 72.5262 12.9341 73.5274 13.1977C74.6617 13.4963 75.6945 14.2708 77.76 15.82L132 56.5M24 47.5V106.3C24 113.021 24 116.381 25.3079 118.948C26.4584 121.206 28.2942 123.042 30.5521 124.192C33.1191 125.5 36.4794 125.5 43.2 125.5H100.8C107.521 125.5 110.881 125.5 113.448 124.192C115.706 123.042 117.542 121.206 118.692 118.948C120 116.381 120 113.021 120 106.3V47.5L83.52 20.14C79.3889 17.0417 77.3234 15.4925 75.0548 14.8953C73.0524 14.3682 70.9476 14.3682 68.9452 14.8953C66.6767 15.4925 64.6111 17.0417 60.48 20.14L24 47.5Z" stroke="white" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M80.9074 60.5C88.5389 60.5 93.6667 67.7638 93.6667 74.54C93.6667 88.2631 72.3852 99.5 72 99.5C71.6148 99.5 50.3333 88.2631 50.3333 74.54C50.3333 67.7638 55.4611 60.5 63.0926 60.5C67.4741 60.5 70.3389 62.7181 72 64.6681C73.6611 62.7181 76.5259 60.5 80.9074 60.5Z" stroke="#5FE9D0" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="contact-form__text">
+                        <h2 class="contact-form__title">Conheça nossas soluções para <span class="contact-form__accent">proteger sua casa</span></h2>
+                        <p class="contact-form__subtitle">Preencha seus dados para receber nossa consultoria gratuita. Um de nossos especialistas irá apresentar a cobertura ideal para você.</p>
+                    </div>
+                </div>
+
+                <div class="contact-form__card" id="form-card">
+                    <form class="form" id="contact-form-el" onsubmit="return handleFormSubmit(event)" aria-label="Formulário de contato">
+                        <div class="form__group">
+                            <label class="form__label">Nome completo <span class="form__required">*</span></label>
+                            <input type="text" class="form__input" id="fullName" placeholder="Digite seu nome completo" required>
+                            <span class="form__error" id="fullName-error">Campo obrigatório</span>
+                        </div>
+
+                        <div class="form__row">
+                            <div class="form__group">
+                                <label class="form__label">WhatsApp <span class="form__required">*</span></label>
+                                <input type="tel" class="form__input" id="whatsapp" placeholder="(00) 00000-0000" required>
+                                <span class="form__error" id="whatsapp-error">Campo obrigatório</span>
+                            </div>
+                            <div class="form__group">
+                                <label class="form__label">CPF</label>
+                                <input type="text" class="form__input" id="cpf" placeholder="000.000.000-00">
+                            </div>
+                        </div>
+
+                        <label class="form__checkbox-label">
+                            <input type="checkbox" id="isTitular" aria-label="Sou titular da conta de energia">
+                            <span class="form__checkbox">Sou titular da conta de energia</span>
+                        </label>
+
+                        <label class="form__checkbox-label">
+                            <input type="checkbox" id="acceptTerms" aria-label="Li e concordo com os termos de uso e políticas de privacidade">
+                            <span class="form__checkbox">Li e concordo com os <a href="#">Termos de uso</a> e <a href="#">Políticas de privacidade</a></span>
+                        </label>
+                        <span class="form__error" id="acceptTerms-error">Você precisa aceitar os termos para continuar</span>
+
+                        <button type="submit" class="btn btn--primary btn--full" aria-label="Solicitar contato">Solicitar contato</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO 3 - Comparação de Custos -->
+    <section class="section comparison" id="comparison" role="region" aria-label="Comparação de custos">
+        <div class="comparison__bg">
+            <img src="assets/images/comparison-bg.png" alt="" loading="lazy" decoding="async">
+            <img src="assets/images/eqtorial-bg1.png" alt="" loading="lazy" decoding="async">
+            <div class="comparison__gradient"></div>
+        </div>
+        <div class="container">
+            <div class="comparison__layout">
+                <div class="comparison__left">
+                    <p class="comparison__question">Em vez de gastar <span class="comparison__red">muito</span> com cada imprevisto…</p>
+                    <div class="comparison__costs">
+                        <div class="cost-card">
+                            <div class="cost-card__icon">
+                                <svg viewBox="0 0 20 20" fill="none">
+                                    <path d="M15.0002 6.99994C15.0002 6.48812 14.8049 5.9763 14.4144 5.58579C14.0239 5.19526 13.512 5 13.0002 5M13.0002 13C16.3139 13 19.0002 10.3137 19.0002 7C19.0002 3.68629 16.3139 1 13.0002 1C9.68648 1 7.00019 3.68629 7.00019 7C7.00019 7.27368 7.01851 7.54308 7.054 7.80704C7.11237 8.24118 7.14155 8.45825 7.12191 8.59559C7.10144 8.73865 7.07539 8.81575 7.00488 8.9419C6.93719 9.063 6.8179 9.18229 6.57932 9.42087L1.46882 14.5314C1.29587 14.7043 1.20939 14.7908 1.14755 14.8917C1.09272 14.9812 1.05232 15.0787 1.02782 15.1808C1.00019 15.2959 1.00019 15.4182 1.00019 15.6627V17.4C1.00019 17.9601 1.00019 18.2401 1.10918 18.454C1.20506 18.6422 1.35804 18.7951 1.5462 18.891C1.76011 19 2.04014 19 2.60019 19H5.00019V17H7.00019V15H9.00019L10.5793 13.4209C10.8179 13.1823 10.9372 13.063 11.0583 12.9953C11.1844 12.9248 11.2615 12.8987 11.4046 12.8783C11.5419 12.8586 11.759 12.8878 12.1932 12.9462C12.4571 12.9817 12.7265 13 13.0002 13Z" stroke="#FEE4E2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="cost-card__name">Chaveiro</p>
+                                <p class="cost-card__detail">Pix</p>
+                            </div>
+                            <span class="cost-card__price">-R$ 140,00</span>
+                        </div>
+
+                        <div class="cost-card">
+                            <div class="cost-card__icon">
+                                <svg viewBox="0 0 21.1213 21.1213" fill="none">
+                                    <path d="M13.7527 6.63137C13.3567 6.23535 13.1587 6.03735 13.0845 5.80902C13.0192 5.60817 13.0192 5.39183 13.0845 5.19098C13.1587 4.96265 13.3567 4.76465 13.7527 4.36863L16.5911 1.53026C15.8378 1.18962 15.0017 1 14.1213 1C10.8076 1 8.12132 3.68629 8.12132 7C8.12132 7.49104 8.18031 7.9683 8.29158 8.42509C8.41074 8.91424 8.47032 9.15882 8.45974 9.31333C8.44867 9.47509 8.42455 9.56115 8.34995 9.70511C8.2787 9.84262 8.14218 9.97914 7.86914 10.2522L1.62132 16.5C0.792893 17.3284 0.792894 18.6716 1.62132 19.5C2.44975 20.3284 3.79289 20.3284 4.62132 19.5L10.8691 13.2522C11.1422 12.9791 11.2787 12.8426 11.4162 12.7714C11.5602 12.6968 11.6462 12.6727 11.808 12.6616C11.9625 12.651 12.2071 12.7106 12.6962 12.8297C13.153 12.941 13.6303 13 14.1213 13C17.435 13 20.1213 10.3137 20.1213 7C20.1213 6.11959 19.9317 5.28347 19.5911 4.53026L16.7527 7.36863C16.3567 7.76465 16.1587 7.96265 15.9303 8.03684C15.7295 8.1021 15.5131 8.1021 15.3123 8.03684C15.084 7.96265 14.886 7.76465 14.4899 7.36863L13.7527 6.63137Z" stroke="#FEE4E2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="cost-card__name">Encanador</p>
+                                <p class="cost-card__detail">Pix</p>
+                            </div>
+                            <span class="cost-card__price">-R$ 150,00</span>
+                        </div>
+
+                        <div class="cost-card">
+                            <div class="cost-card__icon">
+                                <svg viewBox="0 0 22 22" fill="none">
+                                    <path d="M9 16.6586V19C9 20.1046 9.89543 21 11 21C12.1046 21 13 20.1046 13 19V16.6586M11 1V2M2 11H1M4.5 4.5L3.8999 3.8999M17.5 4.5L18.1002 3.8999M21 11H20M17 11C17 14.3137 14.3137 17 11 17C7.68629 17 5 14.3137 5 11C5 7.68629 7.68629 5 11 5C14.3137 5 17 7.68629 17 11Z" stroke="#FEE4E2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="cost-card__name">Eletricista</p>
+                                <p class="cost-card__detail">Parcela 1 de 3</p>
+                            </div>
+                            <span class="cost-card__price">-R$ 200,00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="comparison__right">
+                    <p class="comparison__answer">…pague <span class="comparison__teal">pouco</span><br>por todos juntos</p>
+                    <div class="comparison__deal">
+                        <div class="comparison__deal-icon">
+                            <svg viewBox="0 0 35.3333 35.3333" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12.667 12.6668H22.667V22.6668M22.667 12.6668L12.667 22.6666M34.3333 17.6667C34.3333 26.8714 26.8714 34.3333 17.6667 34.3333C8.46192 34.3333 1 26.8714 1 17.6667C1 8.46192 8.46192 1 17.6667 1C26.8714 1 34.3333 8.46192 34.3333 17.6667Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="comparison__deal-text">
+                            Planos a partir de <span class="comparison__deal-price">R$ 16,90</span>/mês
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO 4 - Vídeo -->
+    <section class="section video-section" id="video" role="region" aria-label="Vídeo">
+        <div class="video-section__bg">
+            <img src="assets/images/video-bg.png" alt="" loading="lazy" decoding="async">
+        </div>
+        <div class="container">
+            <div class="video-section__content">
+                <div class="video-section__title-block">
+                    <h2 class="video-section__title">Sorte que Transforma</h2>
+                    <p class="video-section__subtitle">Concorra a prêmios mensais com seus números da sorte</p>
+                </div>
+                <div class="video-section__player" onclick="playVideo()" role="button" aria-label="Assistir vídeo" tabindex="0" onkeydown="if(event.key==='Enter')playVideo()">
+                    <svg viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M26 46C37.0457 46 46 37.0457 46 26C46 14.9543 37.0457 6 26 6C14.9543 6 6 14.9543 6 26C6 37.0457 14.9543 46 26 46Z" stroke="white" stroke-width="4"/>
+                        <path d="M30.3333 20.6667L20.6667 26L30.3333 31.3333V20.6667Z" fill="white"/>
+                    </svg>
+                </div>
+                <div class="video-section__bottom-text">
+                    Você pode ser o próximo!
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO 5 - Planos -->
+    <section class="section plans" id="plans" role="region" aria-label="Planos">
+        <div class="plans__bg">
+            <img src="assets/images/plans-bg.png" alt="" loading="lazy" decoding="async">
+            <div class="plans__overlay"></div>
+        </div>
+        <div class="container">
+            <h2 class="plans__title">Escolha sua proteção</h2>
+            <div class="plans__grid">
+                <div class="plan-card">
+                    <h3 class="plan-card__name">Casa Segura</h3>
+                    <p class="plan-card__slogan">Essencial para o dia a dia</p>
+                    <div class="plan-card__price">R$ 16,90<span>/mês</span></div>
+                    <ul class="plan-card__features">
+                        <li><span class="plan-card__feature-title">Raio, Incêndio e Explosão:</span>Cobertura de até R$ 60.000,00</li>
+                        <li><span class="plan-card__feature-title">Assistência Básica:</span>Cobertura de até R$ 250,00 (limite de 2 eventos/ano)</li>
+                        <li><span class="plan-card__feature-title">Perda ou Pagamento de Aluguel:</span>Cobertura de até R$ 5.000,00</li>
+                        <li><span class="plan-card__feature-title">Responsabilidade Civil Familiar:</span>Cobertura de até R$ 5.000,00</li>
+                    </ul>
+                    <button class="btn btn--outline btn--full" onclick="scrollToForm()" aria-label="Começar agora com o plano Casa Segura">Começar agora</button>
+                </div>
+
+                <div class="plan-card">
+                    <h3 class="plan-card__name">Casa Prática</h3>
+                    <p class="plan-card__slogan">Mais serviços, mais cobertura</p>
+                    <div class="plan-card__price">R$ 24,90<span>/mês</span></div>
+                    <ul class="plan-card__features">
+                        <li><span class="plan-card__feature-title">Raio, Incêndio e Explosão:</span>Cobertura de até R$ 60.000,00</li>
+                        <li><span class="plan-card__feature-title">Assistência Básica + Intermediária:</span>Cobertura de até R$ 400,00 (limite de 2 eventos/ano) (Desentupimento, Limpeza pós sinistro e Linha Branca)</li>
+                        <li><span class="plan-card__feature-title">Perda ou Pagamento de Aluguel:</span>Cobertura de até R$ 5.000,00</li>
+                        <li><span class="plan-card__feature-title">Responsabilidade Civil Familiar:</span>Cobertura de até R$ 5.000,00</li>
+                        <li><span class="plan-card__feature-title">Vento Forte e Granizo:</span>Cobertura de até R$ 5.000,00 (vendaval, furacão, ciclone, tornado)</li>
+                    </ul>
+                    <button class="btn btn--white btn--full" onclick="scrollToForm()" aria-label="Seja pro com o plano Casa Prática">Seja pro</button>
+                </div>
+
+                <div class="plan-card plan-card--featured">
+                    <span class="plan-card__badge">RECOMENDADO</span>
+                    <h3 class="plan-card__name">Casa Total</h3>
+                    <p class="plan-card__slogan">Mais completo e vantajoso</p>
+                    <div class="plan-card__price">R$ 29,90<span>/mês</span></div>
+                    <ul class="plan-card__features">
+                        <li><span class="plan-card__feature-title">Incêndio, Queda de Raio, Explosão e Fumaça:</span>Cobertura de até R$ 100.000,00</li>
+                        <li><span class="plan-card__feature-title">Assistência Básica + Intermediária:</span>Cobertura de até R$ 400,00 (limite de 2 eventos/ano) (Desentupimento, Limpeza pós sinistro e Linha Branca)</li>
+                        <li><span class="plan-card__feature-title">Perda ou Pagamento de Aluguel:</span>Cobertura de até R$ 5.000,00</li>
+                        <li><span class="plan-card__feature-title">Responsabilidade Civil Familiar:</span>Cobertura de até R$ 5.000,00</li>
+                        <li><span class="plan-card__feature-title">Vento Forte e Granizo:</span>Cobertura de até R$ 5.000,00 (vendaval, furacão, ciclone, tornado)</li>
+                        <li><span class="plan-card__feature-title">Alagamento/Inundação:</span>Cobertura de até R$ 3.000,00</li>
+                    </ul>
+                    <button class="btn btn--outline btn--full" onclick="scrollToForm()" aria-label="Assine o Premium com o plano Casa Total">Assine o Premium</button>
+                </div>
+            </div>
+
+            <div class="plans__cta">
+                <button class="btn btn--white btn--large" onclick="scrollToForm()" aria-label="Receba uma proposta personalizada">Receba uma proposta personalizada</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO 6 - CTA Final -->
+    <section class="section cta-final" id="cta-final" role="region" aria-label="Chamada para ação final">
+        <div class="cta-final__bg">
+            <img src="assets/images/cta-bg.png" alt="" loading="lazy" decoding="async">
+        </div>
+        <div class="container">
+            <div class="cta-final__content">
+                <h2 class="cta-final__title">+1 milhão de clientes já<br><span class="cta-final__title--large">utilizam esse benefício.</span></h2>
+                <p class="cta-final__subtitle">Evite o próximo prejuízo</p>
+                <div class="cta-final__cta-card">
+                    <p class="cta-final__cta-text">Quero contratar o benefício</p>
+                    <div class="cta-final__cta-arrow">
+                        <svg viewBox="0 0 100 42" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                            <rect fill="#15162C" height="42" rx="21" width="100"/>
+                            <path d="M53 20C52.4477 20 52 20.4477 52 21C52 21.5523 52.4477 22 53 22V21V20ZM85.7071 21.7071C86.0976 21.3166 86.0976 20.6834 85.7071 20.2929L79.3431 13.9289C78.9526 13.5384 78.3195 13.5384 77.9289 13.9289C77.5384 14.3195 77.5384 14.9526 77.9289 15.3431L83.5858 21L77.9289 26.6569C77.5384 27.0474 77.5384 27.6805 77.9289 28.0711C78.3195 28.4616 78.9526 28.4616 79.3431 28.0711L85.7071 21.7071ZM53 21V22L85 22V21V20L53 20V21Z" fill="#00CEFE"/>
+                        </svg>
+                    </div>
+                    <button class="btn btn--cta" onclick="scrollToForm()" aria-label="Fale conosco">Fale conosco</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" role="complementary" aria-label="Rodapé">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__info">
+                    <img src="assets/images/logo.png" alt="Equatorial Serviços" class="footer__logo" loading="lazy" decoding="async">
+                    <p class="footer__company"><strong>Equatorial Serviços</strong></p>
+                    <p class="footer__cnpj">CNPJ 39.155.151/0001-54</p>
+                </div>
+                <div class="footer__legal">
+                    <p><strong>Equatorial Serviços - CNPJ: 39.155.151/0001-54</strong><br>
+                    É uma plataforma de seguros e assistências 100% digital.</p>
+                    <p><strong>Endereço:</strong> Alameda A, Quadra Sqs, 100, Altos do Calhau / Cohafuma - São Luís/MA, CEP 65070-900</p>
+                    <p>O registro deste plano na SUSEP não implica, por parte da Autarquia, incentivo ou recomendação à sua comercialização.</p>
+                    <ul>
+                        <li>Seguro Residencial: garantido por SEGUROS SURA - Processo SUSEP nº 15414.003816/2007-85</li>
+                        <li>Título de Capitalização: garantido por ICATU CAPITALIZAÇÃO S.A - Processo SUSEP nº 15.414.900396/2019-11</li>
+                    </ul>
+                    <p>As condições contratuais e regulamentos destes produtos, protocolizados junto à SUSEP, poderão ser consultados no endereço eletrônico www.susep.gov.br, de acordo com o número de processos constante da apólice/proposta.</p>
+                    <p><strong>Ouvidoria:</strong> 0800 123 4567 | <strong>Atendimento Equatorial Serviços:</strong> 0800 728 9518</p>
+                    <p class="footer__disclaimer">Declaro ter tomado ciência, antes da aquisição deste seguro, por meio do intermediário, de todas as informações que a Resolução CNSP 382/38 me garante o acesso.</p>
+                </div>
+            </div>
+            <div class="footer__divider"></div>
+            <p class="footer__copyright">© 2026 Equatorial Serviços. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
