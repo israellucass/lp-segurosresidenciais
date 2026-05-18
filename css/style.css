@@ -825,7 +825,12 @@ body {
 
 .plan-card__feature-title {
     display: block;
-    margin-bottom: 0;
+    margin-bottom: 2px;
+}
+
+.plan-card__feature-desc {
+    display: block;
+    color: white;
 }
 
 .plan-card__features li::before {
