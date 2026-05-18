@@ -11,7 +11,7 @@
     --dark-blue-button: #15162c;
     --gray-light: #f2f2f2;
     --gray-beige: #c3cbd5;
-    --gray-text: #d1d5db;
+    --gray-text: #9ca3af;
     --gray-border: #e5e5e5;
     --text-primary: #404040;
     --text-light: #f5f5f5;
@@ -192,6 +192,8 @@ body {
     position: relative;
     z-index: 2;
     max-width: 908px;
+    width: 100%;
+    min-width: 0;
     display: flex;
     flex-direction: column;
     gap: 24px;
@@ -270,8 +272,9 @@ body {
 .contact-form__layout {
     display: flex;
     flex-direction: row;
-    gap: 48px;
-    align-items: flex-start;
+    gap: 64px;
+    align-items: center;
+    justify-content: center;
     width: 100%;
 }
 
@@ -315,6 +318,8 @@ body {
 .contact-form__card {
     flex: 1;
     max-width: 600px;
+    min-width: 0;
+    width: 100%;
     border-radius: 24px;
     overflow: hidden;
     box-shadow: 0 16px 48px rgba(0, 0, 0, 0.3);
@@ -451,18 +456,18 @@ body {
     display: flex;
     flex-direction: row;
     gap: 64px;
-    align-items: flex-end;
-    justify-content: space-between;
+    align-items: flex-start;
+    justify-content: center;
     min-height: auto;
-    padding: 120px 0;
+    padding: 80px 0;
 }
 
 .comparison__left {
     flex: 1;
+    max-width: 450px;
     display: flex;
     flex-direction: column;
     gap: 24px;
-    align-self: flex-start;
 }
 
 .comparison__question {
@@ -480,7 +485,8 @@ body {
     display: flex;
     flex-direction: column;
     gap: 16px;
-    width: 356px;
+    max-width: 400px;
+    width: 100%;
 }
 
 .cost-card {
@@ -530,10 +536,10 @@ body {
 
 .comparison__right {
     flex: 1;
+    max-width: 450px;
     display: flex;
     flex-direction: column;
     gap: 24px;
-    align-self: flex-end;
     align-items: flex-end;
 }
 
@@ -632,6 +638,7 @@ body {
     color: white;
     letter-spacing: -0.02em;
     text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
+    max-width: 800px;
 }
 
 .video-section__subtitle {
@@ -640,6 +647,7 @@ body {
     color: white;
     text-align: center;
     text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
+    max-width: 600px;
 }
 
 .video-section__player {
@@ -674,7 +682,6 @@ body {
     color: var(--dark-blue-footer);
     text-align: center;
     letter-spacing: -0.02em;
-    white-space: nowrap;
 }
 
 /* ========================================
@@ -744,6 +751,7 @@ body {
     gap: 24px;
     position: relative;
     border-radius: 12px;
+    min-height: 500px;
 }
 
 .plan-card--featured {
@@ -795,7 +803,7 @@ body {
 
 .plan-card__price span {
     font-size: 14px;
-    color: #a1a1aa;
+    color: #c0c0c0;
 }
 
 .plan-card__features {
@@ -869,6 +877,7 @@ body {
     gap: 64px;
     align-items: center;
     max-width: 1280px;
+    width: 100%;
 }
 
 .cta-final__title {
@@ -905,6 +914,7 @@ body {
     gap: 24px;
     max-width: 896px;
     width: 100%;
+    flex-shrink: 0;
 }
 
 .cta-final__cta-text {
@@ -917,6 +927,12 @@ body {
 .cta-final__cta-arrow {
     width: 100px;
     height: 42px;
+    flex-shrink: 0;
+}
+
+.cta-final__cta-arrow svg {
+    width: 100%;
+    height: 100%;
 }
 
 /* ========================================
@@ -1016,7 +1032,7 @@ body {
 
     .comparison__right {
         align-self: flex-start;
-        align-items: flex-start;
+        align-items: center;
     }
 
     .comparison__costs {
@@ -1127,10 +1143,20 @@ body {
     .cta-final__cta-card {
         flex-direction: column;
         text-align: center;
+        gap: 16px;
+        padding: 20px 24px;
+    }
+
+    .cta-final__cta-arrow {
+        width: 60px;
     }
 
     .cta-final__cta-text {
         font-size: 20px;
+    }
+
+    .cta-final__cta-card .btn {
+        width: 100%;
     }
 
     .footer__content {
@@ -1161,10 +1187,10 @@ body {
         align-items: center;
     }
 
-    .footer__legal {
-        font-size: 10px;
-        line-height: 1.5;
-    }
+.footer__legal {
+    font-size: 12px;
+    line-height: 1.5;
+}
 
     .hero__title {
         font-size: 24px;
