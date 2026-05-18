@@ -194,12 +194,10 @@ body {
     position: relative;
     z-index: 2;
     width: 100%;
-    max-width: var(--max-width);
     display: flex;
     flex-direction: column;
     gap: 24px;
     align-self: flex-start;
-    padding: 0 32px;
 }
 
 .hero__logo {
@@ -1058,7 +1056,7 @@ body {
         scroll-snap-type: y proximity;
     }
 
-    .hero__content {
+    .container {
         padding: 0 24px;
     }
 
@@ -1182,10 +1180,6 @@ body {
     }
 
     .container {
-        padding: 0 16px;
-    }
-
-    .hero__content {
         padding: 0 16px;
     }
 
