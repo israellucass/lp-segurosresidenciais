@@ -1,20 +1,7 @@
-# dependencies
-node_modules/
-
-# build
-dist/
-
-# env
-.env*
-
-# logs
-*.log
-npm-debug.log*
-pnpm-debug.log*
-
 # OS / editor
 .DS_Store
 .cursor/
+.vscode/
 
-# source archive (contents already extracted)
-Landing page.zip
+# archives
+*.zip

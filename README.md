@@ -1,11 +1,26 @@
+# Seguro Residencial — Landing Page (Equatorial Serviços)
 
-  # Landing page
+Landing page estática (HTML, CSS e JavaScript) para o seguro residencial Equatorial.
 
-  This is a code bundle for Landing page. The original project is available at https://www.figma.com/design/8O11kfhsnk5WKBZSWxMXs7/Landing-page.
+## Estrutura
 
-  ## Running the code
+```
+├── index.html          # Página principal
+├── assets/images/      # Imagens e logo
+├── css/style.css       # Estilos (inclui responsivo)
+└── js/main.js          # Interações (formulário, animações, scroll)
+```
 
-  Run `npm i` to install the dependencies.
+## Como visualizar
 
-  Run `npm run dev` to start the development server.
-  
+Abra `index.html` no navegador ou use um servidor local, por exemplo:
+
+```bash
+python3 -m http.server 8080
+```
+
+Depois acesse `http://localhost:8080`.
+
+## Deploy
+
+Publique a raiz do projeto em qualquer hospedagem de arquivos estáticos (CDN, S3, Netlify, etc.). Não é necessário build nem Node.js.

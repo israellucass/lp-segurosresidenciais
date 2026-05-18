@@ -163,8 +163,6 @@ body {
     min-height: 100dvh;
     display: flex;
     align-items: center;
-    justify-content: center;
-    padding: 64px 0;
     background: var(--blue-medium);
     scroll-snap-align: start;
 }
@@ -191,12 +189,12 @@ body {
 .hero__content {
     position: relative;
     z-index: 2;
-    max-width: 908px;
     width: 100%;
     min-width: 0;
     display: flex;
     flex-direction: column;
     gap: 24px;
+    align-self: flex-start;
 }
 
 .hero__logo {
