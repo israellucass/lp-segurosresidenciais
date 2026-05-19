@@ -128,8 +128,17 @@ function initPhraseRotator() {
 // ========================================
 // Inicialização
 // ========================================
+function initCheckboxes() {
+    document.querySelectorAll('.shadcn-checkbox').forEach(el => {
+        const icon = document.createElement('i');
+        icon.className = 'ph ph-check';
+        el.appendChild(icon);
+    });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     initWhatsAppMask();
     initPhraseRotator();
+    initCheckboxes();
     console.log('Landing page inicializada!');
 });
