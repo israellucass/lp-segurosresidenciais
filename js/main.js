@@ -132,10 +132,29 @@ function playVideo() {
 }
 
 // ========================================
+// Rotator de Frases (Typed.js)
+// ========================================
+function initPhraseRotator() {
+    new Typed('#typed-phrase', {
+        strings: [
+            'Sem burocracia',
+            'Sem boleto novo',
+            'Direto na conta de luz',
+        ],
+        typeSpeed: 50,
+        backSpeed: 25,
+        backDelay: 1200,
+        loop: true,
+        cursorChar: '',
+    });
+}
+
+// ========================================
 // Inicialização
 // ========================================
 document.addEventListener('DOMContentLoaded', () => {
     initCPFMask();
     initWhatsAppMask();
+    initPhraseRotator();
     console.log('Landing page inicializada!');
 });
