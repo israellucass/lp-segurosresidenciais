@@ -48,7 +48,6 @@ function handleFormSubmit(event) {
     console.log('Form submitted:', {
         fullName: fullName.value,
         whatsapp: whatsapp.value,
-        cpf: document.getElementById('cpf').value,
         isTitular: document.getElementById('isTitular').checked,
         acceptTerms: acceptTerms.checked,
     });
@@ -76,29 +75,6 @@ function toggleError(fieldId, hasError) {
         input.classList.remove('error');
         if (error) error.classList.remove('visible');
     }
-}
-
-// ========================================
-// Máscara de CPF
-// ========================================
-function initCPFMask() {
-    const cpfInput = document.getElementById('cpf');
-    if (!cpfInput) return;
-
-    cpfInput.addEventListener('input', (e) => {
-        let value = e.target.value.replace(/\D/g, '');
-        if (value.length > 11) value = value.slice(0, 11);
-
-        if (value.length > 9) {
-            value = value.replace(/(\d{3})(\d{3})(\d{3})(\d{1,2})/, '$1.$2.$3-$4');
-        } else if (value.length > 6) {
-            value = value.replace(/(\d{3})(\d{3})(\d{1,3})/, '$1.$2.$3');
-        } else if (value.length > 3) {
-            value = value.replace(/(\d{3})(\d{1,3})/, '$1.$2');
-        }
-
-        e.target.value = value;
-    });
 }
 
 // ========================================
@@ -153,7 +129,6 @@ function initPhraseRotator() {
 // Inicialização
 // ========================================
 document.addEventListener('DOMContentLoaded', () => {
-    initCPFMask();
     initWhatsAppMask();
     initPhraseRotator();
     console.log('Landing page inicializada!');
