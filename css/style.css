@@ -6,7 +6,9 @@
     --color-brand-dark: #002048;
     --color-brand: #2D45A0;
     --color-brand-light: #1A91CB;
+    --color-brand-indigo: #4F46B9;
     --color-accent: #5FE9D0;
+    --color-accent-teal: #00AFA0;
 
     /* === Neutros === */
     --color-dark: #0a0a0a;
@@ -119,9 +121,8 @@ body {
     font-weight: 500;
     font-size: 16px;
     cursor: pointer;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition: transform 0.2s ease;
     text-decoration: none;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
 
 .btn:hover {
@@ -168,21 +169,25 @@ body {
 .btn--gradient-border {
     position: relative;
     z-index: 1;
+    overflow: hidden;
 }
 
 .btn--gradient-border::before {
     content: '';
     position: absolute;
-    inset: -2px;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
     z-index: -1;
     border-radius: inherit;
     background: conic-gradient(
-        from var(--angle, 0deg),
-        var(--color-accent),
-        #00cefe,
-        var(--color-accent),
+        from 0deg,
+        #ffffff,
         #5fe9d0,
-        var(--color-accent)
+        #ffffff,
+        #5fe9d0,
+        #ffffff
     );
     animation: rotate-border 3s linear infinite;
 }
@@ -196,10 +201,13 @@ body {
     background: var(--color-accent);
 }
 
-@property --angle {
-    syntax: '<angle>';
-    initial-value: 0deg;
-    inherits: false;
+@keyframes rotate-border {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 @keyframes rotate-border {
@@ -390,6 +398,7 @@ body {
     line-height: 1.2;
     color: var(--color-muted-light);
     letter-spacing: -0.02em;
+    margin-bottom: 32px;
 }
 
 .contact-form__accent {
@@ -410,9 +419,10 @@ body {
     width: 100%;
     border-radius: var(--shadcn-radius);
     overflow: hidden;
-    background: var(--shadcn-card);
-    border: 1px solid var(--shadcn-border);
+    background: var(--color-brand);
+    border: none;
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+    color: #ffffff;
 }
 
 .shadcn-form {
@@ -432,14 +442,14 @@ body {
     font-size: 14px;
     font-weight: 500;
     line-height: 1;
-    color: var(--shadcn-foreground);
+    color: #ffffff;
     display: flex;
     align-items: center;
     gap: 4px;
 }
 
 .shadcn-required {
-    color: var(--shadcn-destructive);
+    color: #ef4444;
     font-weight: 700;
     font-size: 14px;
 }
@@ -447,13 +457,13 @@ body {
 .shadcn-input {
     display: flex;
     height: 40px;
-    background: var(--shadcn-background);
-    border: 1px solid var(--shadcn-input);
+    background: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: calc(var(--shadcn-radius) - 4px);
     padding: 8px 12px;
     font-family: var(--font-body);
     font-size: 14px;
-    color: var(--shadcn-foreground);
+    color: #09090b;
     outline: none;
     transition: border-color 0.15s ease, box-shadow 0.15s ease;
     -webkit-appearance: none;
@@ -461,30 +471,30 @@ body {
 }
 
 .shadcn-input::placeholder {
-    color: var(--shadcn-muted-foreground);
+    color: #6b7280;
 }
 
 .shadcn-input:hover {
-    border-color: var(--shadcn-border);
+    border-color: rgba(255, 255, 255, 0.4);
 }
 
 .shadcn-input:focus {
-    border-color: var(--shadcn-ring);
-    box-shadow: 0 0 0 3px rgba(95, 233, 208, 0.15);
+    border-color: #5fe9d0;
+    box-shadow: 0 0 0 3px rgba(95, 233, 208, 0.3);
 }
 
 .shadcn-input.error {
-    border-color: var(--shadcn-destructive);
+    border-color: #ef4444;
 }
 
 .shadcn-input.error:focus {
-    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.15);
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.3);
 }
 
 .shadcn-error {
     font-size: 12px;
     font-weight: 400;
-    color: var(--shadcn-destructive);
+    color: #ef4444;
     display: none;
 }
 
@@ -505,11 +515,11 @@ body {
     cursor: pointer;
     font-size: 14px;
     line-height: 1.4;
-    color: var(--shadcn-foreground);
+    color: #ffffff;
 }
 
 .shadcn-checkbox-label a {
-    color: var(--shadcn-primary);
+    color: #ffffff;
     text-decoration: underline;
 }
 
@@ -518,8 +528,8 @@ body {
     width: 16px;
     height: 16px;
     border-radius: 4px;
-    border: 1px solid var(--shadcn-ring);
-    background: var(--shadcn-background);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    background: transparent;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -529,7 +539,7 @@ body {
 .shadcn-checkbox i {
     display: none;
     font-size: 12px;
-    color: var(--shadcn-primary-foreground);
+    color: var(--color-brand-dark);
 }
 
 .shadcn-checkbox-label input {
@@ -537,8 +547,8 @@ body {
 }
 
 .shadcn-checkbox-label input:checked + .shadcn-checkbox {
-    background-color: var(--shadcn-primary);
-    border-color: var(--shadcn-primary);
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
 }
 
 .shadcn-checkbox-label input:checked + .shadcn-checkbox i {
@@ -551,9 +561,9 @@ body {
     justify-content: center;
     height: 40px;
     padding: 0 16px;
-    background: var(--shadcn-primary);
-    color: var(--shadcn-primary-foreground);
-    border: 1px solid var(--shadcn-primary);
+    background: var(--color-accent);
+    color: var(--color-brand-dark);
+    border: 1px solid var(--color-accent);
     border-radius: calc(var(--shadcn-radius) - 4px);
     font-family: var(--font-body);
     font-size: 14px;
@@ -563,7 +573,7 @@ body {
 }
 
 .shadcn-submit:hover {
-    background: #18181b;
+    background: #4bd1bb;
 }
 
 .shadcn-submit i {
@@ -796,7 +806,7 @@ body {
 .video-section__title-block {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 32px;
     align-items: center;
 }
 
@@ -861,6 +871,7 @@ body {
     position: relative;
     min-height: 100dvh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 80px 0;
@@ -877,6 +888,12 @@ body {
     inset: 0;
     background: var(--color-brand-dark);
     z-index: 0;
+    pointer-events: none;
+}
+
+.plans .container {
+    position: relative;
+    z-index: 1;
 }
 
 .plans__bg img {
@@ -890,6 +907,7 @@ body {
     position: absolute;
     inset: 0;
     z-index: 1;
+    pointer-events: none;
 }
 
 .plans__title {
@@ -899,6 +917,7 @@ body {
     text-align: center;
     color: var(--color-muted-light);
     letter-spacing: -0.02em;
+    margin-bottom: 32px;
 }
 
 .plans__grid {
@@ -954,7 +973,7 @@ body {
 }
 
 .plan-card__slogan {
-    font-size: 14px;
+    font-size: 16px;
     color: var(--color-muted);
 }
 
@@ -984,14 +1003,14 @@ body {
     display: flex;
     gap: 8px;
     align-items: flex-start;
-    padding: 4px 0;
+    padding: 8px 0;
 }
 
-.plan-card__feature-icon i {
-    font-size: 24px;
+.plan-card__feature-icon {
     color: var(--color-accent);
+    font-size: 18px;
     flex-shrink: 0;
-    margin-top: 4px;
+    padding-top: 2px;
 }
 
 .plan-card__feature-content {
@@ -1009,6 +1028,7 @@ body {
 .plan-card__feature-desc {
     display: block;
     color: var(--color-muted-light);
+    font-size: 14px;
 }
 
 .plans__cta {
@@ -1055,7 +1075,7 @@ body {
     z-index: 1;
     display: flex;
     flex-direction: column;
-    gap: 64px;
+    gap: 32px;
     align-items: center;
     max-width: 1280px;
     width: 100%;
@@ -1116,9 +1136,10 @@ body {
 .footer {
     background: var(--color-brand-dark);
     scroll-snap-align: start;
+    padding: 32px 0;
 }
 
-.footer__content {
+.footer__top {
     display: flex;
     flex-direction: row;
     gap: 48px;
@@ -1147,6 +1168,12 @@ body {
     font-size: 14px;
     color: var(--color-muted-light);
     margin: 0;
+}
+
+.footer__address {
+    font-size: 14px;
+    color: var(--color-muted-light);
+    line-height: 1.6;
 }
 
 .footer__legal {
@@ -1179,6 +1206,10 @@ body {
     height: 1px;
     background: var(--color-border);
     margin: 32px 0;
+}
+
+.footer__bottom {
+    margin-top: 64px;
 }
 
 .footer__copyright {
@@ -1333,7 +1364,7 @@ body {
         width: 100%;
     }
 
-    .footer__content {
+    .footer__top {
         flex-direction: column;
     }
 
@@ -1353,7 +1384,7 @@ body {
     }
 
 
-    .footer__content {
+    .footer__top {
         flex-direction: column;
         gap: 24px;
     }

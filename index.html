@@ -27,6 +27,29 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              equa: {
+                teal: '#00AFA0',
+                brand: '#2D45A0',
+                light: '#1A91CB',
+                indigo: '#4F46B9',
+                dark: '#002048',
+              },
+            },
+            fontFamily: {
+              heading: ['"Bricolage Grotesque"', 'sans-serif'],
+              body: ['"Inter"', 'sans-serif'],
+            },
+          },
+        },
+      };
+    </script>
+
     <link rel="stylesheet" href="css/style.css?v=10">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/regular/style.css">
 
@@ -38,7 +61,7 @@
         "@type": "Organization",
         "name": "Equatorial Serviços",
         "legalName": "Equatorial Serviços",
-        "taxID": "39.155.151/0001-54",
+        "taxID": "09.347.229/0001-71",
         "telephone": "0800 728 9518",
         "url": "https://segurosequatorialexclusivo.com.br/",
         "address": {
@@ -220,7 +243,7 @@
                      <li><i class="ph ph-lightning"></i>Resolve imprevistos rápido</li>
                      <li><i class="ph ph-users"></i>Exclusivo para clientes Equatorial</li>
                  </ul>
-                <a href="#contact-form" class="btn btn--primary btn--gradient-border btn--large" aria-label="Solicitar simulação">Solicitar simulação</a>
+                <a href="#contact-form" class="btn btn--primary btn--gradient-border btn--large" aria-label="Solicitar simulação">Solicitar simulação <i class="ph ph-arrow-right"></i></a>
             </div>
         </section>
 
@@ -240,6 +263,7 @@
 
                 <div class="contact-form__card scroll-reveal" id="form-card">
                     <form class="shadcn-form" id="contact-form-el" onsubmit="return handleFormSubmit(event)" aria-label="Formulário de contato">
+                        <p class="mb-4 text-lg font-medium text-white/90">Preencha somente se for titular da conta de energia</p>
                         <div class="shadcn-form-field">
                             <label class="shadcn-label" for="fullName">Nome completo <span class="shadcn-required">*</span></label>
                             <input type="text" class="shadcn-input" id="fullName" placeholder="Digite seu nome completo" required>
@@ -247,27 +271,23 @@
                         </div>
 
                         <div class="shadcn-form-field">
-                            <label class="shadcn-label" for="whatsapp">WhatsApp <span class="shadcn-required">*</span></label>
+                            <label class="shadcn-label" for="whatsapp">WhatsApp (com DDD) <span class="shadcn-required">*</span></label>
                             <input type="tel" class="shadcn-input" id="whatsapp" placeholder="(00) 00000-0000" required>
                             <span class="shadcn-error" id="whatsapp-error">Campo obrigatório</span>
                         </div>
 
                         <div class="shadcn-checkbox-group">
-                            <label class="shadcn-checkbox-label">
-                                <input type="checkbox" id="isTitular" aria-label="Sou titular da conta de energia">
-                                <span class="shadcn-checkbox"></span>
-                                <span>Sou titular da conta de energia</span>
-                            </label>
+
 
                             <label class="shadcn-checkbox-label">
-                                <input type="checkbox" id="acceptTerms" aria-label="Li e concordo com os termos de uso e políticas de privacidade">
+                                 <input type="checkbox" id="acceptTerms" required aria-label="Li e concordo com os termos de uso e políticas de privacidade">
                                 <span class="shadcn-checkbox"></span>
-                                <span>Li e concordo com as <a href="#">Políticas de privacidade</a></span>
+                                <span>Li e concordo com as <a href="#">Políticas de privacidade</a> <span class="shadcn-required">*</span></span>
                             </label>
                             <span class="shadcn-error" id="acceptTerms-error">Você precisa aceitar os termos para continuar</span>
                         </div>
 
-                        <button type="submit" class="shadcn-submit" aria-label="Solicitar simulação">Solicitar simulação <i class="ph ph-caret-right"></i></button>
+                        <button type="submit" class="btn btn--primary btn--large mt-6" aria-label="Solicitar simulação">Solicitar simulação <i class="ph ph-arrow-right"></i></button>
                     </form>
                 </div>
             </div>
@@ -369,7 +389,7 @@
             <div class="plans__overlay"></div>
         </div>
         <div class="container">
-            <h2 class="plans__title">Escolha sua proteção</h2>
+            <h2 class="plans__title">Escolha o melhor plano para você</h2>
             <div class="plans__grid">
                 <div class="plan-card">
                     <h3 class="plan-card__name">Casa Segura</h3>
@@ -525,7 +545,7 @@
                  <div class="cta-final__cta-arrow">
                           <i class="ph ph-caret-right"></i>
                       </div>
-                    <button class="btn btn--cta" onclick="scrollToForm()" aria-label="Fale conosco">Fale conosco</button>
+                    <button class="btn btn--primary btn--gradient-border btn--large" onclick="scrollToForm()" aria-label="Fale conosco">Fale conosco <i class="ph ph-arrow-right"></i></button>
                 </div>
             </div>
         </div>
@@ -536,14 +556,15 @@
     <!-- Footer -->
     <footer class="footer" role="complementary" aria-label="Rodapé">
         <div class="container">
-            <div class="footer__content">
+            <div class="footer__top">
                 <div class="footer__info">
                     <img src="assets/images/logo.png?v=3" alt="Equatorial Serviços" class="footer__logo" loading="lazy" decoding="async">
                     <p class="footer__company"><strong>Equatorial Serviços</strong></p>
-                    <p class="footer__cnpj">CNPJ 39.155.151/0001-54</p>
+                    <p class="footer__cnpj">CNPJ 09.347.229/0001-71</p>
+                    <p class="footer__address">Al A, Lote: 1-F E 1-G; Quadra: SQR-1, Nº 1, Quitandinha / Vinhaís<br>São Luís/MA, CEP 65.070-636</p>
                 </div>
                 <div class="footer__legal">
-                    <p><strong>Equatorial Serviços - CNPJ: 39.155.151/0001-54</strong><br>
+                    <p><strong>Equatorial Serviços - CNPJ: 09.347.229/0001-71</strong><br>
                     É uma plataforma de seguros e assistências 100% digital.</p>
                     <p><strong>Endereço:</strong> Alameda A, Quadra Sqs, 100, Altos do Calhau / Cohafuma - São Luís/MA, CEP 65070-900</p>
                     <p>O registro deste plano na SUSEP não implica, por parte da Autarquia, incentivo ou recomendação à sua comercialização.</p>
@@ -557,7 +578,9 @@
                 </div>
             </div>
             <div class="footer__divider"></div>
-            <p class="footer__copyright">© 2026 Equatorial Serviços. Todos os direitos reservados.</p>
+            <div class="footer__bottom">
+                <p class="footer__copyright">© 2026 Equatorial Serviços. Todos os direitos reservados.</p>
+            </div>
         </div>
     </footer>
 
