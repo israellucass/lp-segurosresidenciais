@@ -1136,22 +1136,22 @@ body {
 .footer {
     background: var(--color-brand-dark);
     scroll-snap-align: start;
-    padding: 32px 0;
+    padding: 48px 0;
 }
 
-.footer__top {
+/* Content: Logo + Columns */
+.footer__content {
     display: flex;
-    flex-direction: row;
     gap: 48px;
-    flex-wrap: wrap;
+    margin-bottom: 48px;
 }
 
-.footer__info {
-    flex: 1;
+.footer__logo-section {
+    flex: 0 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 16px;
     align-items: flex-start;
+    gap: 12px;
 }
 
 .footer__logo {
@@ -1164,24 +1164,103 @@ body {
     font-weight: 600;
 }
 
-.footer__cnpj {
+.footer__company {
     font-size: 14px;
     color: var(--color-muted-light);
+    font-weight: 600;
+}
+
+/* Columns Section */
+.footer__columns {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+}
+
+.footer__column-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 12px 0;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.footer__links {
+    list-style: none;
+    padding: 0;
     margin: 0;
 }
 
-.footer__address {
+.footer__links li {
+    margin-bottom: 8px;
+}
+
+.footer__links a {
     font-size: 14px;
+    color: var(--color-muted-light);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer__links a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.footer__social {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer__social li {
+    margin-bottom: 8px;
+}
+
+.footer__social a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: var(--color-muted-light);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer__social a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.footer__social img {
+    flex-shrink: 0;
+}
+
+.footer__hours {
+    font-size: 13px;
     color: var(--color-muted-light);
     line-height: 1.6;
 }
 
+.footer__separator {
+    width: 100%;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 48px 0;
+}
+
+/* Legal Section */
 .footer__legal {
-    flex: 1;
     font-size: 12px;
     color: var(--color-muted);
     line-height: 1.6;
     word-break: break-word;
+    padding-bottom: 32px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .footer__legal p {
@@ -1202,20 +1281,16 @@ body {
     font-style: italic;
 }
 
-.footer__divider {
-    height: 1px;
-    background: var(--color-border);
-    margin: 32px 0;
-}
-
-.footer__bottom {
-    margin-top: 64px;
+/* Copyright Section */
+.footer__copyright-section {
+    margin-top: 32px;
 }
 
 .footer__copyright {
     font-size: 14px;
     color: var(--color-muted-light);
     text-align: center;
+    margin: 0;
 }
 
 /* ========================================
@@ -1274,6 +1349,20 @@ body {
 
     .footer__legal ul {
         font-size: 11px;
+    }
+
+    .footer__columns {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer__content {
+        flex-direction: column;
+    }
+
+    .footer__logo-section {
+        flex-direction: row;
+        align-items: center;
+        gap: 16px;
     }
 
     .phrase-rotator__phrase {
@@ -1364,10 +1453,6 @@ body {
         width: 100%;
     }
 
-    .footer__top {
-        flex-direction: column;
-    }
-
     .btn--large {
         font-size: 16px;
         padding: 14px 32px;
@@ -1384,12 +1469,16 @@ body {
     }
 
 
-    .footer__top {
-        flex-direction: column;
+    .footer__columns {
+        grid-template-columns: 1fr;
         gap: 24px;
     }
 
-    .footer__info {
+    .footer__content {
+        flex-direction: column;
+    }
+
+    .footer__logo-section {
         align-items: center;
     }
 
@@ -1490,4 +1579,29 @@ body {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+/* WhatsApp Button */
+.whatsapp-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--color-accent);
+    color: var(--color-dark);
+    padding: 14px 32px;
+    border-radius: 50px;
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 16px;
+    text-decoration: none;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    margin-top: 24px;
+}
+
+.whatsapp-btn:hover {
+    transform: scale(1.05);
+}
+
+.whatsapp-btn i {
+    font-size: 20px;
 }
