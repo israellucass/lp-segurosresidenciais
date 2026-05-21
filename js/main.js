@@ -73,11 +73,19 @@ function toggleError(fieldId, hasError) {
     const error = document.getElementById(`${fieldId}-error`);
 
     if (hasError) {
-        input.classList.add('error');
+        if (input) input.classList.add('error');
         if (error) error.classList.add('visible');
     } else {
-        input.classList.remove('error');
+        if (input) input.classList.remove('error');
         if (error) error.classList.remove('visible');
+    }
+
+    if (fieldId === 'acceptTerms') {
+        const checkboxCustom = input?.parentElement?.querySelector('.checkbox-custom');
+        if (checkboxCustom) {
+            if (hasError) checkboxCustom.classList.remove('checked');
+            else checkboxCustom.classList.toggle('checked', input.checked);
+        }
     }
 }
 
@@ -133,10 +141,18 @@ function initPhraseRotator() {
 // Inicialização
 // ========================================
 function initCheckboxes() {
-    document.querySelectorAll('.shadcn-checkbox').forEach(el => {
+    document.querySelectorAll('.checkbox-custom').forEach(el => {
         const icon = document.createElement('i');
         icon.className = 'ph ph-check';
         el.appendChild(icon);
+    });
+}
+
+function initCheckboxToggle() {
+    const checkbox = document.getElementById('acceptTerms');
+    if (!checkbox) return;
+    checkbox.addEventListener('change', () => {
+        checkbox.parentElement.querySelector('.checkbox-custom').classList.toggle('checked', checkbox.checked);
     });
 }
 
@@ -144,5 +160,6 @@ document.addEventListener('DOMContentLoaded', () => {
     initWhatsAppMask();
     initPhraseRotator();
     initCheckboxes();
+    initCheckboxToggle();
     console.log('Landing page inicializada!');
 });

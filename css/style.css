@@ -27,27 +27,8 @@
     --color-fg: #f5f5f5;
     --color-bg: #002048;
 
-    /* === shadcn/ui Default Tokens === */
-    --shadcn-background: #ffffff;
-    --shadcn-foreground: #09090b;
-    --shadcn-card: #ffffff;
-    --shadcn-card-foreground: #09090b;
-    --shadcn-popover: #ffffff;
-    --shadcn-popover-foreground: #09090b;
-    --shadcn-primary: #09090b;
-    --shadcn-primary-foreground: #fafafa;
-    --shadcn-secondary: #f4f4f5;
-    --shadcn-secondary-foreground: #18181b;
-    --shadcn-muted: #f4f4f5;
-    --shadcn-muted-foreground: #71717a;
-    --shadcn-accent: #f4f4f5;
-    --shadcn-accent-foreground: #18181b;
-    --shadcn-destructive: #ef4444;
-    --shadcn-destructive-foreground: #fafafa;
-    --shadcn-border: #e4e4e7;
-    --shadcn-input: #e4e4e7;
-    --shadcn-ring: #d4d4d8;
-    --shadcn-radius: 0.75rem;
+    /* === Tokens do formulário === */
+    --form-radius: 12px;
 
     /* === Tipografia === */
     --font-heading: 'Bricolage Grotesque', sans-serif;
@@ -312,9 +293,9 @@ body {
     gap: 12px;
 }
 
-/* ========================================
-   SEÇÃO 2 - Formulário (shadcn/ui style)
-   ======================================== */
+   /* ========================================
+    SEÇÃO 2 - Formulário
+    ======================================== */
 .contact-form {
     position: relative;
     min-height: 100dvh;
@@ -372,7 +353,7 @@ body {
     max-width: 600px;
     min-width: 0;
     width: 100%;
-    border-radius: var(--shadcn-radius);
+    border-radius: var(--form-radius);
     overflow: hidden;
     background: var(--color-brand);
     border: none;
@@ -380,105 +361,7 @@ body {
     color: #ffffff;
 }
 
-.shadcn-form {
-    padding: 32px;
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-}
-
-.shadcn-form-field {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-}
-
-.shadcn-label {
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 1;
-    color: #ffffff;
-    display: flex;
-    align-items: center;
-    gap: 4px;
-}
-
-.shadcn-required {
-    color: #ef4444;
-    font-weight: 700;
-    font-size: 14px;
-}
-
-.shadcn-input {
-    display: flex;
-    height: 40px;
-    background: #ffffff;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: calc(var(--shadcn-radius) - 4px);
-    padding: 8px 12px;
-    font-family: var(--font-body);
-    font-size: 14px;
-    color: #09090b;
-    outline: none;
-    transition: border-color 0.15s ease, box-shadow 0.15s ease;
-    -webkit-appearance: none;
-    appearance: none;
-}
-
-.shadcn-input::placeholder {
-    color: #6b7280;
-}
-
-.shadcn-input:hover {
-    border-color: rgba(255, 255, 255, 0.4);
-}
-
-.shadcn-input:focus {
-    border-color: #5fe9d0;
-    box-shadow: 0 0 0 3px rgba(95, 233, 208, 0.3);
-}
-
-.shadcn-input.error {
-    border-color: #ef4444;
-}
-
-.shadcn-input.error:focus {
-    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.3);
-}
-
-.shadcn-error {
-    font-size: 12px;
-    font-weight: 400;
-    color: #ef4444;
-    display: none;
-}
-
-.shadcn-error.visible {
-    display: block;
-}
-
-.shadcn-checkbox-group {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-.shadcn-checkbox-label {
-    display: flex;
-    align-items: flex-start;
-    gap: 8px;
-    cursor: pointer;
-    font-size: 14px;
-    line-height: 1.4;
-    color: #ffffff;
-}
-
-.shadcn-checkbox-label a {
-    color: #ffffff;
-    text-decoration: underline;
-}
-
-.shadcn-checkbox {
+.checkbox-custom {
     flex-shrink: 0;
     width: 16px;
     height: 16px;
@@ -491,22 +374,18 @@ body {
     transition: background-color 0.15s ease, border-color 0.15s ease;
 }
 
-.shadcn-checkbox i {
+.checkbox-custom i {
     display: none;
     font-size: 12px;
     color: var(--color-brand-dark);
 }
 
-.shadcn-checkbox-label input {
-    display: none;
-}
-
-.shadcn-checkbox-label input:checked + .shadcn-checkbox {
+.checkbox-custom.checked {
     background-color: var(--color-accent);
     border-color: var(--color-accent);
 }
 
-.shadcn-checkbox-label input:checked + .shadcn-checkbox i {
+.checkbox-custom.checked i {
     display: block;
 }
 
@@ -1335,9 +1214,9 @@ body {
         font-size: 28px;
     }
 
-   .shadcn-form {
-        padding: 24px;
-    }
+  .form p {
+         padding: 0;
+     }
 
     .comparison__question {
         font-size: 24px;
