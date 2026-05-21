@@ -44,12 +44,16 @@ function handleFormSubmit(event) {
         return false;
     }
 
-    // Sucesso
-    console.log('Form submitted:', {
-        fullName: fullName.value,
-        whatsapp: whatsapp.value,
-        isTitular: document.getElementById('isTitular').checked,
-        acceptTerms: acceptTerms.checked,
+    // Enviar para Google Sheets
+    fetch('https://script.google.com/macros/s/AKfycbw78U36vjQDIVUWAbAuoE5ME6AZP76ERNd5zNdz3DNwYrr14ILbC1YvdvYoe3_yZM-K0A/exec', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+            fullName: fullName.value,
+            whatsapp: whatsapp.value,
+        }),
+    }).catch(() => {
+        // silenciar erro de envio — formulário já foi processado
     });
 
     const message = document.getElementById('success-message');
