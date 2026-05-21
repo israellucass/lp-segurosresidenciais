@@ -317,7 +317,7 @@ body {
    ======================================== */
 .contact-form {
     position: relative;
-    height: 100dvh;
+    min-height: 100dvh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -517,7 +517,7 @@ body {
    ======================================== */
 .comparison {
     position: relative;
-    height: 100dvh;
+    min-height: 100dvh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -696,7 +696,7 @@ body {
     ======================================== */
 .video-section {
     position: relative;
-    height: 100dvh;
+    min-height: 100dvh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -811,7 +811,7 @@ body {
    ======================================== */
 .plans {
     position: relative;
-    height: 100dvh;
+    min-height: 100dvh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -980,7 +980,7 @@ body {
    ======================================== */
 .cta-final {
     position: relative;
-    height: 100dvh;
+    min-height: 100dvh;
     display: flex;
     align-items: center;
     justify-content: center;
