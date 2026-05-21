@@ -1116,6 +1116,38 @@ body {
         font-size: 48px;
     }
 
+    .contact-form__title {
+        font-size: 28px;
+    }
+
+    .comparison__question {
+        font-size: 24px;
+    }
+
+    .comparison__answer {
+        font-size: 24px;
+    }
+
+    .video-section__title {
+        font-size: 32px;
+    }
+
+    .plans__title {
+        font-size: 36px;
+    }
+
+    .cta-final__title {
+        font-size: 32px;
+    }
+
+    .cta-final__title--large {
+        font-size: 40px;
+    }
+
+    .cta-final__subtitle {
+        font-size: 24px;
+    }
+
     .comparison__layout {
         flex-direction: column;
         gap: 48px;
@@ -1238,6 +1270,26 @@ body {
         font-size: 24px;
     }
 
+    .cost-card__name {
+        font-size: 16px;
+    }
+
+    .cost-card__price {
+        font-size: 16px;
+    }
+
+    .cost-card__detail {
+        font-size: 12px;
+    }
+
+    .comparison__deal-text {
+        font-size: 16px;
+    }
+
+    .cta-final__cta-card .btn {
+        width: 100%;
+    }
+
     .plans__title {
         font-size: 36px;
     }
@@ -1285,12 +1337,160 @@ body {
         font-size: 16px;
         padding: 14px 32px;
     }
+
+    .btn {
+        font-size: 16px;
+        padding: 16px 40px;
+    }
+
+    .plan-card__name {
+        font-size: 24px;
+    }
+
+    .plan-card__slogan {
+        font-size: 14px;
+    }
+
+    .btn--secondary {
+        font-size: 14px;
+        padding: 12px 24px;
+    }
 }
 
 @media (max-width: 480px) {
     html {
         scroll-snap-type: none;
     }
+
+    .container {
+        padding: 0 20px;
+    }
+
+    .footer__columns {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .footer__logo-section {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer__legal {
+        font-size: 10px;
+        line-height: 1.5;
+    }
+
+    .contact-form__icon img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .contact-form__title {
+        font-size: 20px;
+    }
+
+    .contact-form__subtitle {
+        font-size: 14px;
+    }
+
+    .hero__title {
+        font-size: 24px;
+    }
+
+    .hero__logo {
+        height: 48px;
+        width: auto;
+    }
+
+    .hero__bg img {
+        width: 140%;
+        object-position: right center;
+    }
+
+    .hero__content {
+        padding: 16px;
+        gap: 16px;
+    }
+
+    .comparison__question {
+        font-size: 20px;
+    }
+
+    .comparison__answer {
+        font-size: 20px;
+    }
+
+    .comparison__costs {
+        width: 100%;
+    }
+
+    .comparison__deal-text {
+        font-size: 14px;
+    }
+
+    .cost-card {
+        padding: 8px 16px;
+    }
+
+    .cost-card__name {
+        font-size: 14px;
+    }
+
+    .cost-card__price {
+        font-size: 14px;
+    }
+
+    .cost-card__detail {
+        font-size: 11px;
+    }
+
+    .video-section__title {
+        font-size: 24px;
+    }
+
+    .video-section__subtitle {
+        font-size: 14px;
+    }
+
+    .video-section__bottom-text {
+        font-size: 18px;
+    }
+
+    .plans__title {
+        font-size: 24px;
+    }
+
+    .plan-card__price {
+        font-size: 28px;
+    }
+
+    .cta-final__title {
+        font-size: 24px;
+    }
+
+    .cta-final__title--large {
+        font-size: 32px;
+    }
+
+    .cta-final__subtitle {
+        font-size: 18px;
+    }
+
+    .cta-final__cta-text {
+        font-size: 16px;
+    }
+
+    .btn--large {
+        font-size: 14px;
+        padding: 14px 32px;
+    }
+
+    .btn {
+        font-size: 14px;
+        padding: 16px 40px;
+    }
+}
 
     .container {
         padding: 0 20px;
@@ -1359,6 +1559,24 @@ body {
 
     .plan-card__price {
         font-size: 36px;
+    }
+
+    .plan-card__name {
+        font-size: 24px;
+    }
+
+    .plan-card__slogan {
+        font-size: 14px;
+    }
+
+    .btn--secondary {
+        font-size: 14px;
+        padding: 12px 24px;
+    }
+
+    .btn--large {
+        font-size: 16px;
+        padding: 14px 32px;
     }
 }
 
