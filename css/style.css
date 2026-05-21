@@ -1078,12 +1078,14 @@ body {
     font-size: 14px;
     color: var(--color-muted-light);
     font-weight: 600;
+    text-align: center;
 }
 
 .footer__company {
     font-size: 14px;
     color: var(--color-muted-light);
     font-weight: 600;
+    text-align: center;
 }
 
 .footer__cnpj {
