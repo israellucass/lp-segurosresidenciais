@@ -1275,8 +1275,8 @@ body {
         scroll-snap-type: y proximity;
     }
 
-    .section > .container > * {
-        padding: 0 24px;
+    .container {
+        padding: 0 16px;
     }
 
     .hero__title {
@@ -1411,10 +1411,6 @@ body {
 @media (max-width: 480px) {
     html {
         scroll-snap-type: none;
-    }
-
-    .section > .container > * {
-        padding: 0 16px;
     }
 
 
