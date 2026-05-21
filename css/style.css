@@ -226,6 +226,7 @@ body {
 .hero {
     position: relative;
     width: 100%;
+    min-height: 100vh;
     height: 100dvh;
     display: flex;
     align-items: center;
@@ -1265,6 +1266,13 @@ body {
         font-size: 32px;
     }
 
+    .hero__content {
+        justify-content: center;
+        max-height: 90dvh;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
     .footer__legal {
         font-size: 11px;
     }
@@ -1409,6 +1417,16 @@ body {
 
     .hero__title {
         font-size: 24px;
+    }
+
+    .hero__logo {
+        height: 48px;
+        width: auto;
+    }
+
+    .hero__content {
+        padding: 16px;
+        gap: 16px;
     }
 
     .hero__benefits {
