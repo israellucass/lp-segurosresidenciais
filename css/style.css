@@ -1116,10 +1116,6 @@ body {
         font-size: 48px;
     }
 
-    .phrase-rotator__phrase {
-        font-size: 24px;
-    }
-
     .comparison__layout {
         flex-direction: column;
         gap: 48px;
@@ -1300,10 +1296,6 @@ body {
         padding: 0 20px;
     }
 
-    .phrase-rotator__phrase {
-        font-size: 16px;
-    }
-
 
     .footer__columns {
         grid-template-columns: 1fr;
@@ -1394,6 +1386,20 @@ body {
     line-height: 42px;
     color: var(--color-muted-light);
     white-space: nowrap;
+}
+
+@media (max-width: 1024px) {
+    .phrase-rotator__phrase {
+        font-size: 24px;
+        line-height: 36px;
+    }
+}
+
+@media (max-width: 480px) {
+    .phrase-rotator__phrase {
+        font-size: 16px;
+        line-height: 24px;
+    }
 }
 
 .typed-cursor {
