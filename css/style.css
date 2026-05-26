@@ -664,12 +664,9 @@ body {
 }
 
 .comparison__deal-text {
-    font-size: 20px;
+    font-size: 16px;
     color: var(--color-muted-light);
     letter-spacing: -0.02em;
-    padding: 10px 0;
-    display: flex;
-    align-items: center;
 }
 
 /* ========================================
@@ -1667,7 +1664,7 @@ body {
     }
 
     .comparison__deal-text {
-        font-size: 14px;
+        font-size: 16px;
     }
 
     .cost-card {
