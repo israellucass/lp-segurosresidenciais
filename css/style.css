@@ -545,6 +545,9 @@ body {
         bottom: 0;
         right: 0;
         max-width: 360px;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
         align-items: flex-end;
         text-align: right;
     }
@@ -1253,11 +1256,16 @@ body {
         max-width: 360px;
     }
 
-    .comparison__right {
+.comparison__right {
         position: absolute;
         bottom: 0;
         right: 0;
-        align-items: center;
+        max-width: 360px;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        align-items: flex-end;
+        text-align: right;
     }
 
     .comparison__costs {
