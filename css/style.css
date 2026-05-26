@@ -256,9 +256,8 @@ body {
 }
 
 .hero__logo {
-    height: auto;
+    height: 48px;
     width: auto;
-    max-height: 64px;
 }
 
 .hero__title {
@@ -1320,7 +1319,8 @@ body {
     }
 
     .hero__logo {
-        max-width: 160px;
+        height: 48px;
+        width: auto;
     }
 
     .hero__benefits {
