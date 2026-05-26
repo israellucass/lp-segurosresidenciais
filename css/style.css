@@ -534,7 +534,7 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    max-width: 450px;
+    max-width: 360px;
     display: flex;
     flex-direction: column;
     gap: 24px;
@@ -1248,6 +1248,7 @@ body {
         position: absolute;
         top: 0;
         left: 0;
+        max-width: 360px;
     }
 
     .comparison__right {
