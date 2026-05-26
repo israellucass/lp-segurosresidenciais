@@ -7,7 +7,7 @@
     <title>Seguro Residencial Equatorial — Proteção contra incêndio, raio, alagamento e mais | A partir de R$ 16,90/mês</title>
 
     <link rel="canonical" href="https://segurosequatorialexclusivo.com.br/">
-    <link rel="icon" type="image/png" href="assets/images/logo.png">
+    <link rel="icon" type="image/svg+xml" href="assets/svg/EquatorialServicos_white.svg">
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
     <meta name="theme-color" content="#1A1A1A">
 
@@ -15,13 +15,13 @@
     <meta property="og:description" content="Seguro residencial Equatorial a partir de R$ 16,90/mês. Proteção completa contra incêndio, raio, alagamento, assistência 24h.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://segurosequatorialexclusivo.com.br/">
-    <meta property="og:image" content="https://segurosequatorialexclusivo.com.br/assets/images/hero-bg.png">
+    <meta property="og:image" content="https://segurosequatorialexclusivo.com.br/assets/images/hero-bg.webp">
     <meta property="og:locale" content="pt_BR">
     <meta property="og:site_name" content="Equatorial Serviços">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Seguro Residencial Equatorial — Proteção contra incêndio, raio, alagamento e mais">
     <meta name="twitter:description" content="Seguro residencial Equatorial a partir de R$ 16,90/mês.">
-    <meta name="twitter:image" content="https://segurosequatorialexclusivo.com.br/assets/images/hero-bg.png">
+    <meta name="twitter:image" content="https://segurosequatorialexclusivo.com.br/assets/images/hero-bg.webp">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -50,7 +50,7 @@
       };
     </script>
 
-    <link rel="stylesheet" href="css/style.css?v=11">
+    <link rel="stylesheet" href="css/style.css?v=26">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/regular/style.css">
 
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12" defer></script>
@@ -229,21 +229,22 @@
     <!-- SEÇÃO 1 - Hero -->
     <section class="section hero" id="hero" role="banner">
         <div class="hero__bg">
-            <img src="assets/images/hero-bg-nova.png?v=1" alt="" loading="eager" decoding="async" aria-hidden="true">
+        <img src="assets/images/hero-bg-nova.webp?v=1" alt="" loading="eager" decoding="async" aria-hidden="true">
         </div>
- 
             <div class="hero__content scroll-reveal">
-                <img src="assets/images/logo.png" alt="Equatorial Serviços - Logo" class="hero__logo" loading="eager">
-                <h1 class="hero__title">Proteja sua casa<br>por menos de<br><span class="hero__accent">R$ 1,00 por dia</span></h1>
-                <div class="phrase-rotator">
-                    <p class="phrase-rotator__phrase"><span id="typed-phrase"></span><span class="typed-cursor">|</span></p>
+                <div class="hero__top">
+                    <img src="assets/svg/EquatorialServicos_white.svg" alt="Equatorial Serviços - Logo" class="hero__logo" loading="eager">
+                    <h1 class="hero__title">Proteja sua casa<br>por menos de<br><span class="hero__accent">R$ 1,00 por dia</span></h1>
+                    <h2 class="phrase-rotator__phrase"><span id="typed-phrase"></span><span class="typed-cursor">|</span></h2>
                 </div>
-  <ul class="hero__benefits">
-                     <li><i class="ph ph-check-circle"></i>Assistência 24h</li>
-                     <li><i class="ph ph-lightning"></i>Resolve imprevistos rápido</li>
-                     <li><i class="ph ph-users"></i>Exclusivo para clientes Equatorial</li>
-                 </ul>
-                <a href="#contact-form" class="btn btn--primary btn--large" aria-label="Solicitar simulação">Solicitar simulação <i class="ph ph-arrow-right"></i></a>
+                <div class="hero__bottom">
+                    <ul class="hero__benefits">
+                        <li><i class="ph ph-check-circle"></i>Assistência 24h</li>
+                        <li><i class="ph ph-lightning"></i>Resolve imprevistos rápido</li>
+                        <li><i class="ph ph-users"></i>Exclusivo para clientes Equatorial</li>
+                    </ul>
+                    <a href="#contact-form" class="btn btn--primary btn--large" aria-label="Solicitar simulação">Solicitar simulação <i class="ph ph-arrow-right"></i></a>
+                </div>
             </div>
         </section>
 
@@ -267,31 +268,29 @@
 
                 <div class="contact-form__card scroll-reveal" id="form-card">
                     <form class="p-8 flex flex-col gap-6" id="contact-form-el" onsubmit="return handleFormSubmit(event)" aria-label="Formulário de contato">
-                        <p class="mb-4 text-lg font-medium text-white/90">Preencha somente se for titular da conta de energia</p>
-                        <div class="flex flex-col gap-1.5">
-                            <label class="text-sm font-medium text-white flex items-center gap-1" for="fullName">Nome completo <span class="text-red-500 font-bold text-sm">*</span></label>
-                            <input type="text" class="h-10 bg-white border border-white/20 rounded-lg px-3 text-sm text-[#09090b] outline-none transition hover:border-white/40 focus:border-[#5fe9d0] focus:ring-4 focus:ring-[#5fe9d0]/30" id="fullName" placeholder="Digite seu nome completo" required>
-                            <span class="text-xs text-red-500 hidden" id="fullName-error">Campo obrigatório</span>
+                        <p class="form-intro">Preencha somente se for titular da conta de energia</p>
+                        <div class="form-field">
+                            <label class="form-label" for="fullName">Nome completo <span class="required">*</span></label>
+                            <input type="text" class="form-input" id="fullName" placeholder="Digite seu nome completo" required>
+                            <span class="form-error-text hidden" id="fullName-error">Campo obrigatório</span>
                         </div>
 
-                        <div class="flex flex-col gap-1.5">
-                            <label class="text-sm font-medium text-white flex items-center gap-1" for="whatsapp">WhatsApp (com DDD) <span class="text-red-500 font-bold text-sm">*</span></label>
-                            <input type="tel" class="h-10 bg-white border border-white/20 rounded-lg px-3 text-sm text-[#09090b] outline-none transition hover:border-white/40 focus:border-[#5fe9d0] focus:ring-4 focus:ring-[#5fe9d0]/30" id="whatsapp" placeholder="(00) 00000-0000" required>
-                            <span class="text-xs text-red-500 hidden" id="whatsapp-error">Campo obrigatório</span>
+                        <div class="form-field">
+                            <label class="form-label" for="whatsapp">WhatsApp (com DDD) <span class="required">*</span></label>
+                            <input type="tel" class="form-input" id="whatsapp" placeholder="(00) 00000-0000" required>
+                            <span class="form-error-text hidden" id="whatsapp-error">Campo obrigatório</span>
                         </div>
 
-                        <div class="flex flex-col gap-3">
-
-
-                            <label class="flex items-start gap-2 cursor-pointer text-sm text-white" id="terms-label">
+                        <div class="form-field">
+                            <label class="form-checkbox-label" id="terms-label">
                                  <input type="checkbox" id="acceptTerms" required aria-label="Li e concordo com os termos de uso e políticas de privacidade">
                                 <span class="checkbox-custom"></span>
-                                <span>Li e concordo com as <a href="https://equatorialservicos.com.br/aviso-externo-de-privacidade/" target="_blank" rel="noopener">Políticas de privacidade</a> <span class="text-red-500 font-bold text-sm">*</span></span>
+                                <span>Li e concordo com as <a href="https://equatorialservicos.com.br/aviso-externo-de-privacidade/" target="_blank" rel="noopener">Políticas de privacidade</a> <span class="required">*</span></span>
                             </label>
-                            <span class="text-xs text-red-500 hidden" id="acceptTerms-error">Você precisa aceitar os termos para continuar</span>
+                            <span class="form-checkbox-error hidden" id="acceptTerms-error">Você precisa aceitar os termos para continuar</span>
                         </div>
 
-                        <button type="submit" class="btn btn--primary btn--large mt-6" aria-label="Solicitar simulação">Solicitar simulação <i class="ph ph-arrow-right"></i></button>
+                        <button type="submit" class="btn btn--primary btn--large form-submit-btn" aria-label="Solicitar simulação">Solicitar simulação <i class="ph ph-arrow-right"></i></button>
                     </form>
                 </div>
             </div>
@@ -301,21 +300,22 @@
     <!-- SEÇÃO 3 - Comparação de Custos -->
     <section class="section comparison" id="comparison" role="region" aria-label="Comparação de custos">
         <div class="comparison__bg">
-            <img src="assets/images/eqtorial-bg1.png?v=4" alt="" loading="lazy" decoding="async" aria-hidden="true">
+            <img src="assets/images/eqtorial-bg1.webp?v=4" alt="" loading="lazy" decoding="async" aria-hidden="true">
             <div class="comparison__gradient"></div>
         </div>
         <div class="container">
             <div class="comparison__layout">
                 <div class="comparison__left scroll-reveal">
-                    <p class="comparison__question">Em vez de gastar <span class="comparison__red">muito</span> com cada imprevisto…</p>
-                    <div class="comparison__costs">
+                    <h2 class="comparison__question">Em vez de gastar <span class="comparison__red">muito</span> com cada imprevisto…</h2>
+                     <h3 class="sr-only">Serviços Incluídos</h3>
+                     <div class="comparison__costs">
                         <div class="cost-card">
                              <div class="cost-card__left">
                               <div class="cost-card__icon">
                                       <i class="ph ph-key"></i>
                                   </div>
                                   <div>
-                                      <p class="cost-card__name">Chaveiro</p>
+                                      <h4 class="cost-card__name">Chaveiro</h4>
                                       <p class="cost-card__detail">Pix</p>
                                   </div>
                               </div>
@@ -328,7 +328,7 @@
                                       <i class="ph ph-drop"></i>
                                   </div>
                                   <div>
-                                      <p class="cost-card__name">Encanador</p>
+                                      <h4 class="cost-card__name">Encanador</h4>
                                       <p class="cost-card__detail">Pix</p>
                                   </div>
                               </div>
@@ -341,7 +341,7 @@
                                       <i class="ph ph-lightning"></i>
                                   </div>
                                   <div>
-                                      <p class="cost-card__name">Eletricista</p>
+                                      <h4 class="cost-card__name">Eletricista</h4>
                                       <p class="cost-card__detail">Parcela 1 de 3</p>
                                   </div>
                               </div>
@@ -351,7 +351,7 @@
                 </div>
 
                 <div class="comparison__right scroll-reveal">
-                    <p class="comparison__answer">…pague <span class="comparison__teal">pouco</span><br>por todos juntos</p>
+                    <h3 class="comparison__answer">…pague <span class="comparison__teal">pouco</span><br>por todos juntos</h3>
 <div class="comparison__deal">
                         <div class="comparison__deal-text">
                              Planos a partir de <span> <strong> R$ 16,90</strong></span>/mês
@@ -368,7 +368,7 @@
     <!-- SEÇÃO 4 - Vídeo -->
     <section class="section video-section" id="video" role="region" aria-label="Vídeo">
         <div class="video-section__bg">
-            <img src="assets/images/video-bg.png?v=3" alt="" loading="lazy" decoding="async" aria-hidden="true">
+            <img src="assets/images/video-bg.webp?v=3" alt="" loading="lazy" decoding="async" aria-hidden="true">
         </div>
         <div class="container">
             <div class="video-section__content scroll-reveal">
@@ -377,12 +377,12 @@
                     <p class="video-section__subtitle">Concorra a prêmios mensais com seus números da sorte</p>
                 </div>
     <div class="video-section__player" onclick="playVideo()" role="button" aria-label="Assistir vídeo" tabindex="0" onkeydown="if(event.key==='Enter')playVideo()">
-                        <img src="assets/images/video-thumbnail.png" alt="Assistir vídeo">
+                        <img src="assets/images/video-thumbnail.webp" alt="Assistir vídeo">
                         <i class="ph ph-play"></i>
                     </div>
-                <div class="video-section__bottom-text">
+                <p class="video-section__bottom-text">
                     Você pode ser o próximo!
-                </div>
+                </p>
             </div>
         </div>
     </section>
@@ -390,7 +390,7 @@
     <!-- SEÇÃO 5 - Planos -->
     <section class="section plans" id="plans" role="region" aria-label="Planos">
         <div class="plans__bg">
-            <img src="assets/images/plans-bg.png?v=3" alt="" loading="lazy" decoding="async" aria-hidden="true">
+            <img src="assets/images/plans-bg.webp?v=3" alt="" loading="lazy" decoding="async" aria-hidden="true">
             <div class="plans__overlay"></div>
         </div>
         <div class="container">
@@ -398,136 +398,136 @@
             <div class="plans__grid">
                 <div class="plan-card">
                     <h3 class="plan-card__name">Casa Segura</h3>
-                    <p class="plan-card__slogan">Essencial para o dia a dia</p>
-                 <div class="plan-card__price">R$ 16,90<span>/mês</span></div>
+                    <h4 class="plan-card__slogan">Essencial para o dia a dia</h4>
+                 <p class="plan-card__price">R$ 16,90<span>/mês</span></p>
                     <ul class="plan-card__features">
+                  <li>
+                                 <i class="ph ph-check-circle plan-card__feature-icon"></i>
+                                 <div class="plan-card__feature-content">
+                                     <h5 class="plan-card__feature-title">Raio, Incêndio e Explosão:</h5>
+                                     <p class="plan-card__feature-desc">Até R$ 60.000,00</p>
+                                 </div>
+                             </li>
+                             <li>
+                                 <i class="ph ph-check-circle plan-card__feature-icon"></i>
+                                 <div class="plan-card__feature-content">
+                                     <h5 class="plan-card__feature-title">Assistência Básica:</h5>
+                                     <p class="plan-card__feature-desc">Até R$ 250,00 (limite de 2 eventos/ano)</p>
+                                 </div>
+                             </li>
+                             <li>
+                                 <i class="ph ph-check-circle plan-card__feature-icon"></i>
+                                 <div class="plan-card__feature-content">
+                                     <h5 class="plan-card__feature-title">Perda ou Pagamento de Aluguel:</h5>
+                                     <p class="plan-card__feature-desc">Até R$ 5.000,00</p>
+                                 </div>
+                             </li>
+                             <li>
+                                 <i class="ph ph-check-circle plan-card__feature-icon"></i>
+                                 <div class="plan-card__feature-content">
+                                     <h5 class="plan-card__feature-title">Responsabilidade Civil Familiar:</h5>
+                                     <p class="plan-card__feature-desc">Até R$ 5.000,00</p>
+                                 </div>
+                             </li>
+                         </ul>
+
+                 </div>
+
+                 <div class="plan-card">
+                     <h3 class="plan-card__name">Casa Prática</h3>
+                     <h4 class="plan-card__slogan">Mais serviços, mais cobertura</h4>
+                   <p class="plan-card__price">R$ 24,90<span>/mês</span></p>
+                  <ul class="plan-card__features">
                           <li>
-                                <i class="ph ph-check-circle plan-card__feature-icon"></i>
-                                <div class="plan-card__feature-content">
-                                    <span class="plan-card__feature-title">Raio, Incêndio e Explosão:</span>
-                                    <div class="plan-card__feature-desc">Até R$ 60.000,00</div>
-                                </div>
-                            </li>
-                            <li>
-                                <i class="ph ph-check-circle plan-card__feature-icon"></i>
-                                <div class="plan-card__feature-content">
-                                    <span class="plan-card__feature-title">Assistência Básica:</span>
-                                    <div class="plan-card__feature-desc">Até R$ 250,00 (limite de 2 eventos/ano)</div>
-                                </div>
-                            </li>
-                            <li>
-                                <i class="ph ph-check-circle plan-card__feature-icon"></i>
-                                <div class="plan-card__feature-content">
-                                    <span class="plan-card__feature-title">Perda ou Pagamento de Aluguel:</span>
-                                    <div class="plan-card__feature-desc">Até R$ 5.000,00</div>
-                                </div>
-                            </li>
-                            <li>
-                                <i class="ph ph-check-circle plan-card__feature-icon"></i>
-                                <div class="plan-card__feature-content">
-                                    <span class="plan-card__feature-title">Responsabilidade Civil Familiar:</span>
-                                    <div class="plan-card__feature-desc">Até R$ 5.000,00</div>
-                                </div>
-                            </li>
+                                 <i class="ph ph-check-circle plan-card__feature-icon"></i>
+                                 <div class="plan-card__feature-content">
+                                     <h5 class="plan-card__feature-title">Raio, Incêndio e Explosão:</h5>
+                                     <p class="plan-card__feature-desc">Até R$ 60.000,00</p>
+                                 </div>
+                             </li>
+                             <li>
+                                 <i class="ph ph-check-circle plan-card__feature-icon"></i>
+                                 <div class="plan-card__feature-content">
+                                     <h5 class="plan-card__feature-title">Assistência Básica + Intermediária:</h5>
+                                     <p class="plan-card__feature-desc">Até R$ 400,00 (limite de 2 eventos/ano) (Desentupimento, Limpeza pós sinistro e Linha Branca)</p>
+                                 </div>
+                             </li>
+                             <li>
+                                 <i class="ph ph-check-circle plan-card__feature-icon"></i>
+                                 <div class="plan-card__feature-content">
+                                     <h5 class="plan-card__feature-title">Perda ou Pagamento de Aluguel:</h5>
+                                     <p class="plan-card__feature-desc">Até R$ 5.000,00</p>
+                                 </div>
+                             </li>
+                             <li>
+                                 <i class="ph ph-check-circle plan-card__feature-icon"></i>
+                                 <div class="plan-card__feature-content">
+                                     <h5 class="plan-card__feature-title">Responsabilidade Civil Familiar:</h5>
+                                     <p class="plan-card__feature-desc">Até R$ 5.000,00</p>
+                                 </div>
+                             </li>
+                             <li>
+                                 <i class="ph ph-check-circle plan-card__feature-icon"></i>
+                                 <div class="plan-card__feature-content">
+                                     <h5 class="plan-card__feature-title">Vento Forte e Granizo:</h5>
+                                     <p class="plan-card__feature-desc">Até R$ 5.000,00 (vendaval, furacão, ciclone, tornado)</p>
+                                 </div>
+                             </li>
                         </ul>
- 
-                </div>
 
-                <div class="plan-card">
-                    <h3 class="plan-card__name">Casa Prática</h3>
-                    <p class="plan-card__slogan">Mais serviços, mais cobertura</p>
-                  <div class="plan-card__price">R$ 24,90<span>/mês</span></div>
-                    <ul class="plan-card__features">
-                         <li>
-                                <i class="ph ph-check-circle plan-card__feature-icon"></i>
-                                <div class="plan-card__feature-content">
-                                    <span class="plan-card__feature-title">Raio, Incêndio e Explosão:</span>
-                                    <div class="plan-card__feature-desc">Até R$ 60.000,00</div>
-                                </div>
-                            </li>
-                            <li>
-                                <i class="ph ph-check-circle plan-card__feature-icon"></i>
-                                <div class="plan-card__feature-content">
-                                    <span class="plan-card__feature-title">Assistência Básica + Intermediária:</span>
-                                    <div class="plan-card__feature-desc">Até R$ 400,00 (limite de 2 eventos/ano) (Desentupimento, Limpeza pós sinistro e Linha Branca)</div>
-                                </div>
-                            </li>
-                            <li>
-                                <i class="ph ph-check-circle plan-card__feature-icon"></i>
-                                <div class="plan-card__feature-content">
-                                    <span class="plan-card__feature-title">Perda ou Pagamento de Aluguel:</span>
-                                    <div class="plan-card__feature-desc">Até R$ 5.000,00</div>
-                                </div>
-                            </li>
-                            <li>
-                                <i class="ph ph-check-circle plan-card__feature-icon"></i>
-                                <div class="plan-card__feature-content">
-                                    <span class="plan-card__feature-title">Responsabilidade Civil Familiar:</span>
-                                    <div class="plan-card__feature-desc">Até R$ 5.000,00</div>
-                                </div>
-                            </li>
-                            <li>
-                                <i class="ph ph-check-circle plan-card__feature-icon"></i>
-                                <div class="plan-card__feature-content">
-                                    <span class="plan-card__feature-title">Vento Forte e Granizo:</span>
-                                    <div class="plan-card__feature-desc">Até R$ 5.000,00 (vendaval, furacão, ciclone, tornado)</div>
-                                </div>
-                            </li>
-                       </ul>
-   
-                </div>
+                 </div>
 
-                <div class="plan-card plan-card--featured">
-                    <span class="plan-card__badge">RECOMENDADO</span>
-                    <h3 class="plan-card__name">Casa Total</h3>
-                    <p class="plan-card__slogan">Mais completo e vantajoso</p>
-                <div class="plan-card__price">R$ 29,90<span>/mês</span></div>
-                    <ul class="plan-card__features">
+                 <div class="plan-card plan-card--featured">
+                     <span class="plan-card__badge">RECOMENDADO</span>
+                     <h3 class="plan-card__name">Casa Total</h3>
+                     <h4 class="plan-card__slogan">Mais completo e vantajoso</h4>
+                 <p class="plan-card__price">R$ 29,90<span>/mês</span></p>
+                 <ul class="plan-card__features">
                           <li>
-                                <i class="ph ph-check-circle plan-card__feature-icon"></i>
-                                <div class="plan-card__feature-content">
-                                    <span class="plan-card__feature-title">Incêndio, Queda de Raio, Explosão e Fumaça:</span>
-                                    <div class="plan-card__feature-desc">Até R$ 100.000,00</div>
-                                </div>
-                            </li>
-                            <li>
-                                <i class="ph ph-check-circle plan-card__feature-icon"></i>
-                                <div class="plan-card__feature-content">
-                                    <span class="plan-card__feature-title">Assistência Básica + Intermediária:</span>
-                                    <div class="plan-card__feature-desc">Até R$ 400,00 (limite de 2 eventos/ano) (Desentupimento, Limpeza pós sinistro e Linha Branca)</div>
-                                </div>
-                            </li>
-                            <li>
-                                <i class="ph ph-check-circle plan-card__feature-icon"></i>
-                                <div class="plan-card__feature-content">
-                                    <span class="plan-card__feature-title">Perda ou Pagamento de Aluguel:</span>
-                                    <div class="plan-card__feature-desc">Até R$ 5.000,00</div>
-                                </div>
-                            </li>
-                            <li>
-                                <i class="ph ph-check-circle plan-card__feature-icon"></i>
-                                <div class="plan-card__feature-content">
-                                    <span class="plan-card__feature-title">Responsabilidade Civil Familiar:</span>
-                                    <div class="plan-card__feature-desc">Até R$ 5.000,00</div>
-                                </div>
-                            </li>
-                            <li>
-                                <i class="ph ph-check-circle plan-card__feature-icon"></i>
-                                <div class="plan-card__feature-content">
-                                    <span class="plan-card__feature-title">Vento Forte e Granizo:</span>
-                                    <div class="plan-card__feature-desc">Até R$ 5.000,00 (vendaval, furacão, ciclone, tornado)</div>
-                                </div>
-                            </li>
-                            <li>
-                                <i class="ph ph-check-circle plan-card__feature-icon"></i>
-                                <div class="plan-card__feature-content">
-                                    <span class="plan-card__feature-title">Alagamento/Inundação:</span>
-                                    <div class="plan-card__feature-desc">Até R$ 3.000,00</div>
-                                </div>
-                            </li>
-                       </ul>
-    
-                </div>
+                                 <i class="ph ph-check-circle plan-card__feature-icon"></i>
+                                 <div class="plan-card__feature-content">
+                                     <h5 class="plan-card__feature-title">Incêndio, Queda de Raio, Explosão e Fumaça:</h5>
+                                     <p class="plan-card__feature-desc">Até R$ 100.000,00</p>
+                                 </div>
+                             </li>
+                             <li>
+                                 <i class="ph ph-check-circle plan-card__feature-icon"></i>
+                                 <div class="plan-card__feature-content">
+                                     <h5 class="plan-card__feature-title">Assistência Básica + Intermediária:</h5>
+                                     <p class="plan-card__feature-desc">Até R$ 400,00 (limite de 2 eventos/ano) (Desentupimento, Limpeza pós sinistro e Linha Branca)</p>
+                                 </div>
+                             </li>
+                             <li>
+                                 <i class="ph ph-check-circle plan-card__feature-icon"></i>
+                                 <div class="plan-card__feature-content">
+                                     <h5 class="plan-card__feature-title">Perda ou Pagamento de Aluguel:</h5>
+                                     <p class="plan-card__feature-desc">Até R$ 5.000,00</p>
+                                 </div>
+                             </li>
+                             <li>
+                                 <i class="ph ph-check-circle plan-card__feature-icon"></i>
+                                 <div class="plan-card__feature-content">
+                                     <h5 class="plan-card__feature-title">Responsabilidade Civil Familiar:</h5>
+                                     <p class="plan-card__feature-desc">Até R$ 5.000,00</p>
+                                 </div>
+                             </li>
+                             <li>
+                                 <i class="ph ph-check-circle plan-card__feature-icon"></i>
+                                 <div class="plan-card__feature-content">
+                                     <h5 class="plan-card__feature-title">Vento Forte e Granizo:</h5>
+                                     <p class="plan-card__feature-desc">Até R$ 5.000,00 (vendaval, furacão, ciclone, tornado)</p>
+                                 </div>
+                             </li>
+                             <li>
+                                 <i class="ph ph-check-circle plan-card__feature-icon"></i>
+                                 <div class="plan-card__feature-content">
+                                     <h5 class="plan-card__feature-title">Alagamento/Inundação:</h5>
+                                     <p class="plan-card__feature-desc">Até R$ 3.000,00</p>
+                                 </div>
+                             </li>
+                        </ul>
+
+                 </div>
             </div>
 
             <div class="plans__cta">
@@ -539,7 +539,7 @@
     <!-- SEÇÃO 6 - CTA Final -->
     <section class="section cta-final" id="cta-final" role="region" aria-label="Chamada para ação final">
         <div class="cta-final__bg">
-            <img src="assets/images/cta-bg.png?v=3" alt="" loading="lazy" decoding="async" aria-hidden="true">
+            <img src="assets/images/cta-bg.webp?v=3" alt="" loading="lazy" decoding="async" aria-hidden="true">
         </div>
         <div class="container">
             <div class="cta-final__content scroll-reveal">
@@ -562,8 +562,9 @@
     <footer class="footer" role="complementary" aria-label="Rodapé">
         <div class="container">
             <div class="footer__logo-section">
-                <img src="assets/images/logo.png?v=3" alt="Equatorial Serviços" class="footer__logo" loading="lazy" decoding="async">
-                <p class="footer__company"><strong>Equatorial Serviços</strong><br><span class="footer__cnpj">CNPJ 09.347.229/0001-71</span></p>
+                <img src="assets/svg/EquatorialServicos_white.svg" alt="Equatorial Serviços" class="footer__logo" loading="lazy" decoding="async">
+                <h3 class="footer__company"><strong>Equatorial Serviços</strong></h3>
+                <p class="footer__cnpj">CNPJ 09.347.229/0001-71</p>
             </div>
 
             <div class="footer__separator"></div>
