@@ -1,3 +1,6 @@
+/* ========================================
+   Variáveis e Reset
+   ======================================== */
 :root {
     /* === Cores da marca === */
     --color-brand-dark: #002048;
@@ -31,61 +34,6 @@
     --font-heading: 'Bricolage Grotesque', sans-serif;
     --font-body: 'Inter', sans-serif;
     --max-width: 1280px;
-
-    /* ========================================
-       Espaçamento (Sistema de 4px)
-       ======================================== */
-    --space-1: 4px;
-    --space-2: 8px;
-    --space-3: 12px;
-    --space-4: 16px;
-    --space-5: 20px;
-    --space-6: 24px;
-    --space-8: 32px;
-    --space-10: 40px;
-    --space-12: 48px;
-    --space-14: 56px;
-    --space-16: 64px;
-    --space-20: 80px;
-
-    /* === Layout === */
-    --container-padding: var(--space-8);
-    --section-padding-y: var(--space-20);
-    --footer-padding-y: var(--space-12);
-
-    /* === Componentes === */
-    --card-padding: var(--space-6);
-    --cost-card-padding: var(--space-3) var(--space-6);
-    --cta-card-padding: var(--space-6) var(--space-8);
-    --btn-padding: var(--space-4) var(--space-10);
-    --btn-primary-padding: var(--space-5) var(--space-10);
-    --btn-large-padding: var(--space-5) var(--space-12);
-    --btn-secondary-padding: var(--space-4) var(--space-8);
-    --whatsapp-padding-right: var(--space-14);
-    --hero-padding: var(--space-8);
-    --legal-padding-bottom: var(--space-8);
-    --legal-list-padding-left: var(--space-5);
-    --column-title-padding-bottom: var(--space-2);
-    --plan-badge-padding: var(--space-2) var(--space-4);
-    --feature-item-padding: var(--space-2) 0;
-    --feature-icon-padding-top: var(--space-1);
-    --bottom-text-padding: var(--space-2) var(--space-4);
-    --icon-padding: var(--space-3);
-    --skip-link-padding: var(--space-3) var(--space-6);
-    --success-message-padding: var(--space-4) var(--space-8);
-    --success-message-close-padding: 0 var(--space-1);
-
-    /* === Mobile === */
-    --container-padding-mobile: var(--space-6);
-    --hero-padding-mobile: var(--space-6) var(--space-4);
-    --hero-padding-mobile-lg: var(--space-10) var(--space-4);
-    --btn-padding-mobile: var(--space-3) var(--space-6);
-    --btn-primary-padding-mobile: var(--space-3) var(--space-8);
-    --btn-large-padding-mobile: var(--space-3) var(--space-8);
-    --btn-secondary-padding-mobile: var(--space-3) var(--space-6);
-    --cost-card-padding-mobile: 0 var(--space-6);
-    --icon-padding-mobile: var(--space-3) var(--space-2) var(--space-3) var(--space-4);
-    --cta-card-padding-mobile: var(--space-5) var(--space-6);
 }
 
 /* ========================================
@@ -98,7 +46,7 @@
     transform: translateX(-50%);
     background: var(--color-accent);
     color: var(--color-fg);
-    padding: var(--skip-link-padding);
+    padding: 12px 24px;
     border-radius: 8px;
     z-index: 10000;
     font-weight: 600;
@@ -134,7 +82,7 @@ body {
     max-width: var(--max-width);
     margin: 0 auto;
     box-sizing: border-box;
-    padding: 0 var(--container-padding);
+    padding: 0 32px;
 }
 
 /* ========================================
@@ -145,7 +93,7 @@ body {
     align-items: center;
     justify-content: center;
     gap: 8px;
-    padding: var(--btn-padding);
+    padding: 16px 40px;
     border-radius: 50px;
     border: 2px solid rgba(255, 255, 255, 0.12);
     font-family: var(--font-body);
@@ -162,7 +110,7 @@ body {
 
 .btn--primary {
     display: flex;
-    padding: var(--btn-primary-padding);
+    padding: 20px 40px;
     justify-content: center;
     align-items: center;
     gap: 8px;
@@ -185,7 +133,7 @@ body {
 
 .btn--large {
     font-size: 18px;
-    padding: var(--btn-large-padding);
+    padding: 20px 48px;
 }
 
 .btn--white {
@@ -208,8 +156,8 @@ body {
     transform: translateX(-50%) translateY(-100%);
     z-index: 1000;
     background: var(--color-accent);
-    padding: var(--btn-secondary-padding);
-    padding-right: var(--whatsapp-padding-right);
+    padding: 16px 32px;
+    padding-right: 56px;
     border-radius: 12px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
     opacity: 0;
@@ -239,7 +187,7 @@ body {
     border: none;
     font-size: 20px;
     color: var(--color-dark);
-    padding: var(--success-message-close-padding);
+    padding: 0 4px;
     line-height: 1;
     opacity: 0.7;
     transition: opacity 0.2s;
@@ -294,7 +242,7 @@ body {
     max-width: 1280px;
     width: 100%;
     margin: auto;
-    padding: var(--hero-padding);
+    padding: 32px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -345,7 +293,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: var(--section-padding-y) 0;
+    padding: 80px 0;
     background: var(--color-brand-dark);
     scroll-snap-align: start;
     overflow: hidden;
@@ -437,7 +385,7 @@ body {
     background: #ffffff;
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 8px;
-    padding: 0 var(--space-3);
+    padding: 0 12px;
     font-size: 14px;
     color: #09090b;
     outline: none;
@@ -551,7 +499,7 @@ body {
 }
 
 .comparison .container {
-    padding: 0 var(--container-padding);
+    padding: 0 32px;
     height: calc(100dvh - 128px);
 }
 
@@ -625,7 +573,7 @@ body {
 .cost-card {
     background: rgba(163, 3, 6, 0.5);
     border: 1px solid var(--color-danger-dark);
-    padding: var(--cost-card-padding);
+    padding: 10px 24px;
     border-radius: 8px;
     display: flex;
     flex-direction: row;
@@ -645,7 +593,7 @@ body {
     font-size: 32px;
     background: rgba(0, 0, 0, 0.2);
     border: 1px solid var(--color-danger-dark);
-    padding: var(--icon-padding);
+    padding: 12px;
     border-radius: 50%;
     width: 48px;
     height: 48px;
@@ -699,7 +647,7 @@ body {
     background: var(--color-brand-light);
     border-radius: 8px;
     border: 1px solid var(--color-brand-light);
-    padding: var(--icon-padding-mobile);
+    padding: 10px 8px 10px 16px;
 }
 
 .comparison__deal-icon {
@@ -730,7 +678,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: var(--section-padding-y) 0;
+    padding: 80px 0;
     background: var(--color-brand-dark);
     overflow: hidden;
     scroll-snap-align: start;
@@ -826,7 +774,7 @@ body {
 
 .video-section__bottom-text {
     background: var(--color-bg-muted);
-    padding: var(--bottom-text-padding);
+    padding: 8px 16px;
     font-family: var(--font-heading);
     font-weight: 600;
     font-size: 40px;
@@ -846,7 +794,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: var(--section-padding-y) 0;
+    padding: 80px 0;
     background: linear-gradient(98.7712deg, var(--color-brand-dark) 7.52%, var(--color-brand) 86.86%);
     scroll-snap-align: start;
     overflow: hidden;
@@ -897,7 +845,7 @@ body {
 }
 
 .plan-card {
-    padding: var(--card-padding);
+    padding: 24px;
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -923,7 +871,7 @@ body {
     transform: translate(-50%, -50%);
     background: var(--color-accent);
     border: 1px solid var(--color-accent);
-    padding: var(--plan-badge-padding);
+    padding: 6px 16px;
     border-radius: 20px;
     font-size: 14px;
     font-weight: 600;
@@ -969,14 +917,14 @@ body {
     display: flex;
     gap: 8px;
     align-items: flex-start;
-    padding: var(--feature-item-padding);
+    padding: 8px 0;
 }
 
 .plan-card__feature-icon {
     color: var(--color-accent);
     font-size: 18px;
     flex-shrink: 0;
-    padding-top: var(--feature-icon-padding-top);
+    padding-top: 4px;
 }
 
 .plan-card__feature-content {
@@ -1014,7 +962,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: var(--section-padding-y) 0;
+    padding: 80px 0;
     background: var(--color-bg-light);
     overflow: hidden;
     scroll-snap-align: start;
@@ -1070,7 +1018,7 @@ body {
     background: var(--color-muted-light);
     border: 2px solid var(--color-dark);
     border-radius: 24px;
-    padding: var(--cta-card-padding);
+    padding: 24px 32px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -1099,7 +1047,7 @@ body {
 .footer {
     background: var(--color-brand-dark);
     scroll-snap-align: start;
-    padding: var(--footer-padding-y) 0;
+    padding: 48px 0;
 }
 
 /* Logo Section */
@@ -1146,7 +1094,7 @@ body {
     font-weight: 700;
     color: #ffffff;
     margin: 0 0 12px 0;
-    padding-bottom: var(--column-title-padding-bottom);
+    padding-bottom: 8px;
 }
 
 .footer__links {
@@ -1221,7 +1169,7 @@ body {
     color: var(--color-muted);
     line-height: 1.6;
     word-break: break-word;
-    padding-bottom: var(--legal-padding-bottom);
+    padding-bottom: 32px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -1235,7 +1183,7 @@ body {
 
 .footer__legal ul {
     list-style: disc;
-    padding-left: var(--legal-list-padding-left);
+    padding-left: 20px;
     margin-top: 12px;
 }
 
@@ -1361,7 +1309,7 @@ body {
         flex-direction: column;
         justify-content: space-between;
         min-height: 100%;
-        padding: var(--hero-padding-mobile-lg);
+        padding: 40px 24px;
         box-sizing: border-box;
     }
 
@@ -1391,7 +1339,7 @@ body {
     }
 
     .container {
-        padding: 0 var(--container-padding-mobile);
+        padding: 0 24px;
     }
 
     .hero__title {
@@ -1426,7 +1374,7 @@ body {
         justify-content: space-between;
         align-items: flex-start;
         min-height: 100%;
-        padding: var(--card-padding);
+        padding: 24px;
         box-sizing: border-box;
     }
 
@@ -1533,7 +1481,7 @@ body {
         flex-direction: column;
         text-align: center;
         gap: 16px;
-        padding: var(--cta-card-padding-mobile);
+        padding: 20px 24px;
     }
 
     .cta-final__cta-arrow {
@@ -1550,12 +1498,12 @@ body {
 
     .btn--large {
         font-size: 16px;
-        padding: var(--btn-large-padding-mobile);
+        padding: 14px 32px;
     }
 
     .btn {
         font-size: 16px;
-        padding: var(--btn-padding-mobile);
+        padding: 16px 40px;
     }
 
     .plan-card__name {
@@ -1568,7 +1516,7 @@ body {
 
     .btn--secondary {
         font-size: 14px;
-        padding: var(--skip-link-padding);
+        padding: 12px 24px;
     }
 
     .footer__company {
@@ -1626,7 +1574,7 @@ body {
     }
 
     .container {
-        padding: 0 var(--container-padding-mobile);
+        padding: 0 24px;
     }
 
     .footer__columns {
@@ -1691,7 +1639,7 @@ body {
     }
 
   .hero__content {
-        padding: var(--plan-badge-padding);
+        padding: 32px 16px;
         gap: 16px;
         justify-content: flex-start;
         align-items: flex-start;
@@ -1720,7 +1668,7 @@ body {
     }
 
     .cost-card {
-        padding: var(--bottom-text-padding);
+        padding: 8px 16px;
     }
 
     .cost-card__name {
@@ -1773,12 +1721,12 @@ body {
 
     .btn--large {
         font-size: 14px;
-        padding: var(--btn-large-padding-mobile);
+        padding: 14px 32px;
     }
 
     .btn {
         font-size: 14px;
-        padding: var(--btn-padding-mobile);
+        padding: 16px 40px;
     }
 
     .form-intro {
@@ -1839,7 +1787,7 @@ body {
         flex-direction: column;
         justify-content: space-between;
         min-height: 100%;
-        padding: var(--plan-badge-padding);
+        padding: 32px 16px;
         box-sizing: border-box;
     }
 
