@@ -27,6 +27,10 @@
     /* === Tokens do formulário === */
     --form-radius: 12px;
 
+    /* === Layout responsivo === */
+    --container-padding-md: var(--space-8);  /* 32px — tablet landscape */
+    --section-padding-y-mobile: var(--space-12);  /* 48px — mobile sections */
+
     /* === Tipografia === */
     --font-heading: 'Bricolage Grotesque', sans-serif;
     --font-body: 'Inter', sans-serif;
@@ -49,7 +53,7 @@
     --space-20: 80px;
 
     /* === Layout === */
-    --container-padding: var(--space-8);
+    --container-padding: var(--space-10);
     --section-padding-y: var(--space-20);
     --footer-padding-y: var(--space-12);
 
@@ -135,6 +139,13 @@ body {
     margin: 0 auto;
     box-sizing: border-box;
     padding: 0 var(--container-padding);
+}
+
+/* === Mobile (≤768px) === */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 var(--container-padding-mobile);
+    }
 }
 
 /* ========================================
@@ -336,9 +347,9 @@ body {
     gap: 12px;
 }
 
-   /* ========================================
-    SEÇÃO 2 - Formulário
-    ======================================== */
+/* ========================================
+   SEÇÃO 2 - Formulário
+   ======================================== */
 .contact-form {
     position: relative;
     min-height: 100dvh;
@@ -349,6 +360,12 @@ body {
     background: var(--color-brand-dark);
     scroll-snap-align: start;
     overflow: hidden;
+}
+
+@media (max-width: 768px) {
+    .contact-form {
+        padding: var(--section-padding-y-mobile) 0;
+    }
 }
 
 .contact-form__layout {
@@ -378,34 +395,11 @@ body {
     line-height: 1.2;
     color: var(--color-muted-light);
     letter-spacing: -0.02em;
-    margin-bottom: 32px;
-}
-
-.contact-form__accent {
-    color: var(--color-accent);
-}
-
-.contact-form__subtitle {
-    font-size: 18px;
-    line-height: 1.6;
-    color: var(--color-muted-light);
-}
-
-.contact-form__card {
-    flex: 1;
-    max-width: 600px;
-    min-width: 0;
-    width: 100%;
-    border-radius: var(--form-radius);
-    overflow: hidden;
-    background: var(--color-brand);
-    border: none;
-    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
-    color: #ffffff;
+    margin-bottom: var(--space-8);
 }
 
 .form-intro {
-    margin: 0 0 16px;
+    margin: 0 0 var(--space-4);
     font-size: 16px;
     font-weight: 500;
     color: rgba(255, 255, 255, 0.9);
@@ -506,7 +500,7 @@ body {
 }
 
 .form-submit-btn {
-    margin-top: 24px;
+    margin-top: var(--space-6);
 }
 
 .checkbox-custom {
@@ -736,6 +730,12 @@ body {
     scroll-snap-align: start;
 }
 
+@media (max-width: 768px) {
+    .video-section {
+        padding: var(--section-padding-y-mobile) 0;
+    }
+}
+
 .video-section__bg {
     position: absolute;
     inset: 0;
@@ -852,6 +852,12 @@ body {
     overflow: hidden;
 }
 
+@media (max-width: 768px) {
+    .plans {
+        padding: var(--section-padding-y-mobile) 0;
+    }
+}
+
 .plans__bg {
     position: absolute;
     inset: 0;
@@ -886,7 +892,7 @@ body {
     text-align: center;
     color: var(--color-muted-light);
     letter-spacing: -0.02em;
-    margin-bottom: 32px;
+    margin-bottom: var(--space-8);
 }
 
 .plans__grid {
@@ -1000,7 +1006,7 @@ body {
 .plans__cta {
     max-width: 768px;
     width: 100%;
-    margin: 48px auto 0;
+    margin: var(--space-12) auto 0;
     display: flex;
     justify-content: center;
 }
@@ -1018,6 +1024,12 @@ body {
     background: var(--color-bg-light);
     overflow: hidden;
     scroll-snap-align: start;
+}
+
+@media (max-width: 768px) {
+    .cta-final {
+        padding: var(--section-padding-y-mobile) 0;
+    }
 }
 
 .cta-final__bg {
@@ -1108,32 +1120,9 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 12px;
-    margin-bottom: 32px;
+    margin-bottom: var(--space-8);
 }
 
-.footer__logo {
-    height: 48px;
-}
-
-.footer__company {
-    font-size: 14px;
-    color: var(--color-muted-light);
-    font-weight: 600;
-    text-align: center;
-}
-
-.footer__company {
-    font-size: 14px;
-    color: var(--color-muted-light);
-    font-weight: 600;
-    text-align: center;
-}
-
-.footer__cnpj {
-    font-weight: 400;
-}
-
-/* Columns Section */
 .footer__columns {
     flex: 1;
     display: grid;
@@ -1145,7 +1134,7 @@ body {
     font-size: 16px;
     font-weight: 700;
     color: #ffffff;
-    margin: 0 0 12px 0;
+    margin: 0 0 var(--space-3) 0;
     padding-bottom: var(--column-title-padding-bottom);
 }
 
@@ -1156,7 +1145,7 @@ body {
 }
 
 .footer__links li {
-    margin-bottom: 8px;
+    margin-bottom: var(--space-2);
 }
 
 .footer__links a {
@@ -1179,7 +1168,7 @@ body {
 }
 
 .footer__social li {
-    margin-bottom: 8px;
+    margin-bottom: var(--space-2);
 }
 
 .footer__social a {
@@ -1212,7 +1201,7 @@ body {
     width: 100%;
     height: 1px;
     background: rgba(255, 255, 255, 0.1);
-    margin: 48px 0;
+    margin: var(--space-12) 0;
 }
 
 /* Legal Section */
@@ -1262,6 +1251,12 @@ body {
 /* ========================================
    Responsivo
    ======================================== */
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 var(--container-padding-md);
+    }
+}
+
 @media (max-width: 1200px) {
     .comparison__layout {
         display: grid;
@@ -1361,7 +1356,7 @@ body {
         flex-direction: column;
         justify-content: space-between;
         min-height: 100%;
-        padding: var(--hero-padding-mobile-lg);
+        padding: var(--space-6);  /* 24px — escala de 4px */
         box-sizing: border-box;
     }
 
@@ -1426,7 +1421,7 @@ body {
         justify-content: space-between;
         align-items: flex-start;
         min-height: 100%;
-        padding: var(--card-padding);
+        padding: var(--space-6);  /* 24px — escala de 4px */
         box-sizing: border-box;
     }
 
@@ -1691,7 +1686,7 @@ body {
     }
 
   .hero__content {
-        padding: var(--plan-badge-padding);
+        padding: var(--space-4) var(--space-3);  /* 16px 12px — escala de 4px */
         gap: 16px;
         justify-content: flex-start;
         align-items: flex-start;
@@ -1720,7 +1715,7 @@ body {
     }
 
     .cost-card {
-        padding: var(--bottom-text-padding);
+        padding: var(--space-4) var(--space-3);  /* 16px 12px — escala de 4px */
     }
 
     .cost-card__name {
@@ -1828,6 +1823,7 @@ body {
     white-space: nowrap;
 }
 
+/* === Hero responsive — uma regra por breakpoint, sem conflitos === */
 @media (max-width: 1024px) {
     .hero {
         align-items: flex-start;
@@ -1839,7 +1835,7 @@ body {
         flex-direction: column;
         justify-content: space-between;
         min-height: 100%;
-        padding: var(--plan-badge-padding);
+        padding: var(--space-5) var(--space-4);  /* 20px 16px — escala de 4px */
         box-sizing: border-box;
     }
 
@@ -1924,7 +1920,8 @@ body {
     background: transparent;
     color: white;
     border: 2px solid #ffffff;
-    padding: 14px 32px;
+    padding: var(--space-4) var(--space-8); /* 16px 32px — escala de 4px */
+
     border-radius: 50px;
     font-family: var(--font-body);
     font-weight: 600;
