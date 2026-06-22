@@ -54,6 +54,8 @@
 
     /* === Layout === */
     --container-padding: var(--space-10);
+    --page-gutter-x: var(--container-padding);
+    --hero-padding-y: var(--space-8);
     --section-padding-y: var(--space-20);
     --footer-padding-y: var(--space-12);
 
@@ -90,6 +92,32 @@
     --cost-card-padding-mobile: 0 var(--space-6);
     --icon-padding-mobile: var(--space-3) var(--space-2) var(--space-3) var(--space-4);
     --cta-card-padding-mobile: var(--space-5) var(--space-6);
+}
+
+/* === Page gutters (horizontal margins) === */
+@media (max-width: 1200px) {
+    :root {
+        --page-gutter-x: var(--container-padding-md);
+    }
+}
+
+@media (max-width: 1024px) {
+    :root {
+        --hero-padding-y: var(--space-5);
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        --page-gutter-x: var(--container-padding-mobile);
+        --hero-padding-y: var(--space-6);
+    }
+}
+
+@media (max-width: 480px) {
+    :root {
+        --hero-padding-y: var(--space-4);
+    }
 }
 
 /* ========================================
@@ -138,14 +166,7 @@ body {
     max-width: var(--max-width);
     margin: 0 auto;
     box-sizing: border-box;
-    padding: 0 var(--container-padding);
-}
-
-/* === Mobile (≤768px) === */
-@media (max-width: 768px) {
-    .container {
-        padding: 0 var(--container-padding-mobile);
-    }
+    padding: 0 var(--page-gutter-x);
 }
 
 /* ========================================
@@ -191,7 +212,6 @@ body {
 
 .btn--primary:hover {
     background: #00AFA0;
-    color: #ffffff;
 }
 
 .btn--large {
@@ -305,7 +325,7 @@ body {
     max-width: 1280px;
     width: 100%;
     margin: auto;
-    padding: var(--hero-padding);
+    padding: var(--hero-padding-y) var(--page-gutter-x);
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -619,7 +639,6 @@ body {
 }
 
 .comparison .container {
-    padding: 0 var(--container-padding);
     height: calc(100dvh - 128px);
 }
 
@@ -1332,10 +1351,6 @@ body {
    ======================================== */
 /* === Tablet landscape (≤1200px) === */
 @media (max-width: 1200px) {
-    .container {
-        padding: 0 var(--container-padding-md);
-    }
-
     .comparison__layout {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -1434,7 +1449,6 @@ body {
         flex-direction: column;
         justify-content: space-between;
         min-height: 100%;
-        padding: var(--space-6);  /* 24px — escala de 4px */
         box-sizing: border-box;
     }
 
@@ -1461,10 +1475,6 @@ body {
         font-size: 14px;
         margin: 0;
         padding: 0;
-    }
-
-    .container {
-        padding: 0 var(--container-padding-mobile);
     }
 
     .hero__title {
@@ -1499,7 +1509,6 @@ body {
         justify-content: space-between;
         align-items: flex-start;
         min-height: 100%;
-        padding: var(--space-6);  /* 24px — escala de 4px */
         box-sizing: border-box;
     }
 
@@ -1764,7 +1773,6 @@ body {
     }
 
   .hero__content {
-        padding: var(--space-4) var(--space-3);  /* 16px 12px — escala de 4px */
         gap: 16px;
         justify-content: flex-start;
         align-items: flex-start;
@@ -1913,7 +1921,6 @@ body {
         flex-direction: column;
         justify-content: space-between;
         min-height: 100%;
-        padding: var(--space-5) var(--space-4);  /* 20px 16px — escala de 4px */
         box-sizing: border-box;
     }
 
@@ -1995,6 +2002,9 @@ body {
     display: inline-flex;
     align-items: center;
     gap: 8px;
+    width: fit-content;
+    max-width: 100%;
+    align-self: flex-start;
     background: transparent;
     color: white;
     border: 2px solid #ffffff;
