@@ -253,41 +253,44 @@
         <div class="container">
             <div class="contact-form__layout">
                 <div class="contact-form__info scroll-reveal">
-            <div class="contact-form__icon">
-                          <img src="assets/svg/houseHeart.svg" alt="Ilustração casa com coração" width="144" height="144">
-                      </div>
+                    <div class="contact-form__icon">
+                        <img src="assets/svg/houseHeart.svg" alt="Ilustração casa com coração" width="144" height="144">
+                    </div>
                     <div class="contact-form__text">
                         <h2 class="contact-form__title">Conheça nossas soluções para <span class="contact-form__accent">proteger sua casa</span></h2>
                         <p class="contact-form__subtitle">Preencha seus dados para receber nossa consultoria gratuita. Um de nossos especialistas irá apresentar a cobertura ideal para você.</p>
                         <a href="https://api.whatsapp.com/send?phone=558000990055&text=Ol%C3%A1!%20Vi%20as%20informa%C3%A7%C3%B5es%20no%20formulario%20e%20gostaria%20de%20falar%20com%20um%20atendente" target="_blank" rel="noopener noreferrer" class="btn--secondary">
-                             <img src="assets/svg/whatsapp_icon.svg" alt="WhatsApp" width="20" height="20" class="btn--secondary__icon">
+                            <img src="assets/svg/whatsapp_icon.svg" alt="WhatsApp" width="20" height="20" class="btn--secondary__icon">
                             Fale pelo WhatsApp
                         </a>
                     </div>
                 </div>
 
                 <div class="contact-form__card scroll-reveal" id="form-card">
-                    <form class="p-8 flex flex-col gap-6" id="contact-form-el" onsubmit="return handleFormSubmit(event)" aria-label="Formulário de contato">
-                        <p class="form-intro">Preencha somente se for titular da conta de energia</p>
-                        <div class="form-field">
-                            <label class="form-label" for="fullName">Nome completo <span class="required">*</span></label>
-                            <input type="text" class="form-input" id="fullName" placeholder="Digite seu nome completo" required>
-                            <span class="form-error-text hidden" id="fullName-error">Campo obrigatório</span>
-                        </div>
+                    <form class="contact-form__form" id="contact-form-el" onsubmit="return handleFormSubmit(event)" aria-label="Formulário de contato">
+                        <div class="contact-form__fields">
+                            <p class="form-intro">Preencha somente se for titular da conta de energia</p>
 
-                        <div class="form-field">
-                            <label class="form-label" for="whatsapp">WhatsApp (com DDD) <span class="required">*</span></label>
-                            <input type="tel" class="form-input" id="whatsapp" placeholder="(00) 00000-0000" required>
-                            <span class="form-error-text hidden" id="whatsapp-error">Campo obrigatório</span>
-                        </div>
+                            <div class="form-field">
+                                <label class="form-label" for="fullName">Nome completo <span class="required">*</span></label>
+                                <input type="text" class="form-input" id="fullName" placeholder="Digite seu nome completo" required>
+                                <span class="form-error-text hidden" id="fullName-error">Campo obrigatório</span>
+                            </div>
 
-                        <div class="form-field">
-                            <label class="form-checkbox-label" id="terms-label">
-                                 <input type="checkbox" id="acceptTerms" required aria-label="Li e concordo com os termos de uso e políticas de privacidade">
-                                <span class="checkbox-custom"></span>
-                                <span>Li e concordo com as <a href="https://equatorialservicos.com.br/aviso-externo-de-privacidade/" target="_blank" rel="noopener">Políticas de privacidade</a> <span class="required">*</span></span>
-                            </label>
-                            <span class="form-checkbox-error hidden" id="acceptTerms-error">Você precisa aceitar os termos para continuar</span>
+                            <div class="form-field">
+                                <label class="form-label" for="whatsapp">WhatsApp (com DDD) <span class="required">*</span></label>
+                                <input type="tel" class="form-input" id="whatsapp" placeholder="(00) 00000-0000" required>
+                                <span class="form-error-text hidden" id="whatsapp-error">Campo obrigatório</span>
+                            </div>
+
+                            <div class="form-field">
+                                <label class="form-checkbox-label" id="terms-label" for="acceptTerms">
+                                    <input type="checkbox" id="acceptTerms" required aria-label="Li e concordo com os termos de uso e políticas de privacidade">
+                                    <span class="checkbox-custom"></span>
+                                    <span>Li e concordo com as <a href="https://equatorialservicos.com.br/aviso-externo-de-privacidade/" target="_blank" rel="noopener">Políticas de privacidade</a> <span class="required">*</span></span>
+                                </label>
+                                <span class="form-checkbox-error hidden" id="acceptTerms-error">Você precisa aceitar os termos para continuar</span>
+                            </div>
                         </div>
 
                         <button type="submit" class="btn btn--primary btn--large form-submit-btn" aria-label="Solicitar simulação">Solicitar simulação <i class="ph ph-arrow-right"></i></button>

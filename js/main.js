@@ -62,6 +62,7 @@ function handleFormSubmit(event) {
     // Reset após 3 segundos
     setTimeout(() => {
         document.getElementById('contact-form-el').reset();
+        syncCheckboxVisuals();
         message.classList.remove('visible');
     }, 3000);
 
@@ -148,12 +149,18 @@ function initCheckboxes() {
     });
 }
 
+function syncCheckboxVisuals() {
+    document.querySelectorAll('.form-checkbox-label input[type="checkbox"]').forEach((checkbox) => {
+        const custom = checkbox.parentElement?.querySelector('.checkbox-custom');
+        if (custom) custom.classList.toggle('checked', checkbox.checked);
+    });
+}
+
 function initCheckboxToggle() {
     const checkbox = document.getElementById('acceptTerms');
     if (!checkbox) return;
-    checkbox.addEventListener('change', () => {
-        checkbox.parentElement.querySelector('.checkbox-custom').classList.toggle('checked', checkbox.checked);
-    });
+    checkbox.addEventListener('change', syncCheckboxVisuals);
+    syncCheckboxVisuals();
 }
 
 document.addEventListener('DOMContentLoaded', () => {
